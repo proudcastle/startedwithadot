@@ -93,11 +93,14 @@ export function ForgotPasswordForm({
                 </Button>
               </div>
               <div className="mt-4 text-center text-sm">
+                <span className="text-muted-foreground">
+                  Remember it now?{" "}
+                </span>
                 <Link
                   href="/auth/login"
                   className="text-muted-foreground hover:text-foreground underline underline-offset-4"
                 >
-                  Back to Log In
+                  Log In
                 </Link>
               </div>
             </form>
