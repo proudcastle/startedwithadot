@@ -1,0 +1,16 @@
+/* Google Fonts @import removed -- Press Start 2P loaded via next/font/google in layout.tsx */
+
+.retro {
+  font-family:
+    "Press Start 2P",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
