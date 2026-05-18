@@ -64,3 +64,60 @@ export async function submitProposal(
   revalidatePath("/proposals");
   return { message: "Proposal submitted. The dot is listening.", success: true };
 }
+
+export async function updateProposalStatus(
+  proposalId: string,
+  newStatus: "accepted" | "rejected" | "implemented"
+): Promise<{ success: boolean; message: string }> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  if (!user) {
+    return { success: false, message: "Not authenticated." };
+  }
+
+  const { error } = await supabase
+    .from("proposals")
+    .update({ status: newStatus })
+    .eq("id", proposalId);
+
+  if (error) {
+    return {
+      success: false,
+      message: "Failed to update status. The dot is confused.",
+    };
+  }
+
+  revalidatePath("/proposals");
+  return { success: true, message: `Proposal marked as ${newStatus}.` };
+}
+
+export async function deleteProposal(
+  proposalId: string
+): Promise<{ success: boolean; message: string }> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  if (!user) {
+    return { success: false, message: "Not authenticated." };
+  }
+
+  const { error } = await supabase
+    .from("proposals")
+    .delete()
+    .eq("id", proposalId);
+
+  if (error) {
+    return {
+      success: false,
+      message: "Failed to delete proposal. It clings to existence.",
+    };
+  }
+
+  revalidatePath("/proposals");
+  return { success: true, message: "Proposal deleted. Gone forever." };
+}
