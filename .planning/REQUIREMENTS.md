@@ -20,10 +20,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **AUTH-01**: User can sign up with email and password
 - [x] **AUTH-02**: User chooses a unique, immutable username at registration
-- [ ] **AUTH-03**: User can log in and session persists across browser refresh
-- [ ] **AUTH-04**: User can reset password via email link
-- [ ] **AUTH-05**: User can log out from any page
-- [ ] **AUTH-06**: Email verification enforced before user can submit proposals or vote
+- [x] **AUTH-03**: User can log in and session persists across browser refresh
+- [x] **AUTH-04**: User can reset password via email link
+- [x] **AUTH-05**: User can log out from any page
+- [x] **AUTH-06**: Email verification enforced before user can submit proposals or vote
 
 ### Game Canvas
 
@@ -156,10 +156,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FOUND-06 | Phase 1 | Complete |
 | AUTH-01 | Phase 1 | Complete |
 | AUTH-02 | Phase 1 | Complete |
-| AUTH-03 | Phase 1 | Pending |
-| AUTH-04 | Phase 1 | Pending |
-| AUTH-05 | Phase 1 | Pending |
-| AUTH-06 | Phase 1 | Pending |
+| AUTH-03 | Phase 1 | Complete |
+| AUTH-04 | Phase 1 | Complete |
+| AUTH-05 | Phase 1 | Complete |
+| AUTH-06 | Phase 1 | Complete |
 | GAME-01 | Phase 3 | Pending |
 | GAME-02 | Phase 3 | Pending |
 | GAME-03 | Phase 3 | Pending |

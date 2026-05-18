@@ -13,7 +13,7 @@ This roadmap delivers a community platform where users propose changes to a puls
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation and Auth** - Database schema, RLS policies, and complete auth flow from the Supabase starter template
+- [x] **Phase 1: Foundation and Auth** - Database schema, RLS policies, and complete auth flow from the Supabase starter template (completed 2026-05-18)
 - [ ] **Phase 2: The Community Loop** - Proposals, voting, and admin curation working end-to-end
 - [ ] **Phase 3: Game Canvas and Versions** - Pulsing dot canvas and version history linked to implemented proposals
 - [ ] **Phase 4: Visual Identity and Launch** - Pixel-art polish, landing page, SEO, narrator voice, and Vercel deployment
@@ -43,7 +43,7 @@ Plans:
 
 **Wave 2** *(blocked on Wave 1 completion)*
 
-- [ ] 01-02-PLAN.md — Auth Lifecycle: login, logout, password reset, email verification enforcement, human verify
+- [x] 01-02-PLAN.md — Auth Lifecycle: login, logout, password reset, email verification enforcement, human verify
 
 ### Phase 2: The Community Loop
 
@@ -119,7 +119,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation and Auth | 1/2 | In Progress|  |
+| 1. Foundation and Auth | 2/2 | Complete   | 2026-05-18 |
 | 2. The Community Loop | 0/3 | Not started | - |
 | 3. Game Canvas and Versions | 0/2 | Not started | - |
 | 4. Visual Identity and Launch | 0/3 | Not started | - |
