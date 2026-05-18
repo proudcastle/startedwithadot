@@ -1,31 +1,33 @@
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/components/ui/8bit/card";
+import Link from "next/link";
 
 export default function Page() {
   return (
     <div className="flex min-h-svh w-full items-center justify-center p-6 md:p-10">
-      <div className="w-full max-w-sm">
-        <div className="flex flex-col gap-6">
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-2xl">
-                Thank you for signing up!
-              </CardTitle>
-              <CardDescription>Check your email to confirm</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-muted-foreground">
-                You&apos;ve successfully signed up. Please check your email to
-                confirm your account before signing in.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
+      <div className="w-full max-w-[480px]">
+        <Card>
+          <CardHeader>
+            <CardTitle className="font-[family-name:var(--font-press-start-2p)] text-xl leading-relaxed">
+              Check your email.
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <p className="text-sm text-muted-foreground">
+              We sent you a verification link. Click it. The dot is waiting.
+            </p>
+            <Link
+              href="/auth/login"
+              className="text-sm text-muted-foreground hover:text-foreground underline underline-offset-4"
+            >
+              Back to Log In
+            </Link>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );

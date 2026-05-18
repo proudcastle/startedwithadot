@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Press_Start_2P } from "next/font/google";
 import { ThemeProvider } from "next-themes";
+import { Header } from "@/components/header";
+import { Suspense } from "react";
 import "./globals.css";
 
 const defaultUrl = process.env.VERCEL_URL
@@ -50,6 +52,9 @@ export default function RootLayout({
           forcedTheme="dark"
           disableTransitionOnChange
         >
+          <Suspense>
+            <Header />
+          </Suspense>
           {children}
         </ThemeProvider>
       </body>
