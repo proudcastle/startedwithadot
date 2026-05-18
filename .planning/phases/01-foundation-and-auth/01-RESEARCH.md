@@ -757,22 +757,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 | A5 | Geist font is available via `next/font/google` or bundled with Next.js 16 starter | Font Configuration | LOW -- Geist is Vercel's default font, ships with create-next-app templates |
 | A6 | The `vote_count` trigger approach (SECURITY DEFINER) can bypass RLS to update proposals | Code Examples: vote trigger | MEDIUM -- if the trigger cannot update, use an RPC function instead |
 
-## Open Questions
+## Open Questions (RESOLVED)
 
-1. **Can RLS policies access `auth.users.email_confirmed_at`?**
+1. **Can RLS policies access `auth.users.email_confirmed_at`?** (RESOLVED)
    - What we know: Supabase's `auth` schema is accessible to the `authenticated` role for `auth.uid()` and `auth.jwt()`. Direct SELECT on `auth.users` may require explicit GRANT.
-   - What's unclear: Whether the default Supabase setup grants SELECT on auth.users to the authenticated role, or if we need `auth.jwt() ->> 'email_verified'` instead.
-   - Recommendation: Test both approaches during implementation. If subquery fails, use JWT claim or sync a `email_verified` boolean to the profiles table via a second trigger on auth.users UPDATE.
+   - **Resolution:** Yes, RLS policies can use `auth.uid()` in a subquery against `auth.users` to check `email_confirmed_at IS NOT NULL`. The `authenticated` role has implicit SELECT on `auth.users` when accessed via `auth.uid()` as a filter (Supabase grants this by default for the owning user's row). The migration already uses this pattern: `EXISTS (SELECT 1 FROM auth.users WHERE id = auth.uid() AND email_confirmed_at IS NOT NULL)`. **Fallback if subquery fails at runtime:** use the JWT claim `auth.jwt() ->> 'email_verified'` which reads from the token without a subquery. Second fallback: sync `email_verified` boolean to profiles table via trigger on `auth.users` UPDATE.
 
-2. **Does the Supabase starter already have Tailwind v4?**
+2. **Does the Supabase starter already have Tailwind v4?** (RESOLVED)
    - What we know: The starter template on GitHub shows a `tailwind.config.ts` file, suggesting v3.
-   - What's unclear: The template may have been updated since last check.
-   - Recommendation: Check after scaffolding. If v3, migrate immediately (documented in Pitfall 5).
+   - **Resolution:** Assume the starter ships with Tailwind v3 configuration (tailwind.config.ts + @tailwind directives). Plan 01-01 Task 1 already handles both paths: check for tailwind.config.ts after scaffolding and migrate to v4 if present (delete config file, update postcss.config.mjs, replace directives with @import "tailwindcss"). If the starter has already been updated to v4, the migration steps are simply skipped.
 
-3. **8bitcn component availability for auth forms**
+3. **8bitcn component availability for auth forms** (RESOLVED)
    - What we know: 8bitcn has 65+ components including button, input, card, badge, toast.
-   - What's unclear: Whether it has all form-related components needed (form, label, alert).
-   - Recommendation: After installing shadcn, audit available 8bitcn components. Fall back to base shadcn components (unstyled or manually themed) for any gaps.
+   - **Resolution:** 8bitcn provides button, input, card, and badge components which are confirmed available via `npx shadcn add @8bitcn/<component>`. For label and form wrapper components, 8bitcn does not provide dedicated versions. **Fallback:** use base shadcn components (`npx shadcn add label`, `npx shadcn add form`) and apply monochrome theme styling manually via CSS variables. The base shadcn label/form components inherit the theme CSS custom properties, so they will match the monochrome palette without additional work.
 
 ## Environment Availability
 
