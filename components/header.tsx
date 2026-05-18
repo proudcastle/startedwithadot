@@ -29,6 +29,12 @@ export async function Header() {
           startedwithadot
         </Link>
         <nav className="flex items-center gap-4">
+          <Link
+            href="/proposals"
+            className="font-[family-name:var(--font-press-start-2p)] text-sm text-muted-foreground hover:text-foreground"
+          >
+            Proposals
+          </Link>
           {user ? (
             <>
               {username && (
