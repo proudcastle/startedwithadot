@@ -59,14 +59,21 @@ Plans:
   4. Admin can change proposal status (Open/Accepted/Rejected/Implemented), create versions linked to proposals, and delete proposals for moderation
   5. Proposals display in a filterable feed sorted by votes, with status tabs (All/Open/Accepted/Implemented)
 
-**Plans**: TBD
+**Plans**: 3 plans
 **UI hint**: yes
 
 Plans:
+**Wave 1**
 
-- [ ] 02-01: TBD
-- [ ] 02-02: TBD
-- [ ] 02-03: TBD
+- [ ] 02-01-PLAN.md — Proposal submission + feed display: inline input with character counter, card-based feed sorted by votes, Sonner toasts, rate limiting
+
+**Wave 2** *(blocked on Wave 1 completion)*
+
+- [ ] 02-02-PLAN.md — Voting + status tabs: optimistic vote toggle with dot counters, status filter tabs via URL params
+
+**Wave 3** *(blocked on Wave 2 completion)*
+
+- [ ] 02-03-PLAN.md — Admin curation: status changes, proposal deletion, version creation dialog, DB migration push
 
 ### Phase 3: Game Canvas and Versions
 
