@@ -30,12 +30,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. User can reset a forgotten password via email link
   4. Database tables (profiles, proposals, votes, versions) exist with RLS policies enforced on every table
   5. 8bitcn/ui components render correctly with monochrome dark theme and pixel font headings
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
-- [ ] 01-03: TBD
+- [ ] 01-01-PLAN.md — Walking Skeleton: scaffold, theme, fonts, DB schema + RLS, signup with username E2E
+- [ ] 01-02-PLAN.md — Auth Lifecycle: login, logout, password reset, email verification enforcement, human verify
 
 ### Phase 2: The Community Loop
 **Goal**: Users can propose ideas, vote on them, and an admin can curate the proposal lifecycle
@@ -99,7 +98,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation and Auth | 0/3 | Not started | - |
+| 1. Foundation and Auth | 0/2 | Planning complete | - |
 | 2. The Community Loop | 0/3 | Not started | - |
 | 3. Game Canvas and Versions | 0/2 | Not started | - |
 | 4. Visual Identity and Launch | 0/3 | Not started | - |
