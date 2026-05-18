@@ -52,10 +52,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Admin
 
-- [ ] **ADMN-01**: Admin user (flag-based) can change proposal status (Open → Accepted/Rejected, Accepted → Implemented)
-- [ ] **ADMN-02**: Admin can create new versions linked to implemented proposals
-- [ ] **ADMN-03**: Admin can delete proposals for moderation
-- [ ] **ADMN-04**: Admin controls accessible directly in the UI (not only Supabase Dashboard)
+- [x] **ADMN-01**: Admin user (flag-based) can change proposal status (Open → Accepted/Rejected, Accepted → Implemented)
+- [x] **ADMN-02**: Admin can create new versions linked to implemented proposals
+- [x] **ADMN-03**: Admin can delete proposals for moderation
+- [x] **ADMN-04**: Admin controls accessible directly in the UI (not only Supabase Dashboard)
 
 ### Changelog
 
@@ -176,10 +176,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | VOTE-02 | Phase 2 | Complete (02-02) |
 | VOTE-03 | Phase 2 | Complete (02-02) |
 | VOTE-04 | Phase 2 | Complete (02-02) |
-| ADMN-01 | Phase 2 | Pending |
-| ADMN-02 | Phase 2 | Pending |
-| ADMN-03 | Phase 2 | Pending |
-| ADMN-04 | Phase 2 | Pending |
+| ADMN-01 | Phase 2 | Complete |
+| ADMN-02 | Phase 2 | Complete |
+| ADMN-03 | Phase 2 | Complete |
+| ADMN-04 | Phase 2 | Complete |
 | CHNG-01 | Phase 3 | Pending |
 | CHNG-02 | Phase 3 | Pending |
 | CHNG-03 | Phase 3 | Pending |
