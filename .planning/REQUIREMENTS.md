@@ -35,13 +35,13 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Proposals
 
-- [ ] **PROP-01**: Authenticated user can submit a proposal (max 140 characters, inline input)
-- [ ] **PROP-02**: Character counter displays remaining characters with narrator-style feedback
-- [ ] **PROP-03**: Proposals display in a vertical timeline, sorted by votes (most dots first)
-- [ ] **PROP-04**: Each proposal shows: text, username, relative timestamp, dot-counter, status indicator
+- [x] **PROP-01**: Authenticated user can submit a proposal (max 140 characters, inline input)
+- [x] **PROP-02**: Character counter displays remaining characters with narrator-style feedback
+- [x] **PROP-03**: Proposals display in a vertical timeline, sorted by votes (most dots first)
+- [x] **PROP-04**: Each proposal shows: text, username, relative timestamp, dot-counter, status indicator
 - [ ] **PROP-05**: Proposals filterable by status tabs: All / Open / Accepted / Implemented
-- [ ] **PROP-06**: Rate limiting enforced at 3 proposals per user per day
-- [ ] **PROP-07**: Unauthenticated users can view proposals but not submit or vote
+- [x] **PROP-06**: Rate limiting enforced at 3 proposals per user per day
+- [x] **PROP-07**: Unauthenticated users can view proposals but not submit or vote
 
 ### Voting
 
@@ -165,13 +165,13 @@ Which phases cover which requirements. Updated during roadmap creation.
 | GAME-03 | Phase 3 | Pending |
 | GAME-04 | Phase 3 | Pending |
 | GAME-05 | Phase 3 | Pending |
-| PROP-01 | Phase 2 | Pending |
-| PROP-02 | Phase 2 | Pending |
-| PROP-03 | Phase 2 | Pending |
-| PROP-04 | Phase 2 | Pending |
+| PROP-01 | Phase 2 | Complete (02-01) |
+| PROP-02 | Phase 2 | Complete (02-01) |
+| PROP-03 | Phase 2 | Complete (02-01) |
+| PROP-04 | Phase 2 | Complete (02-01) |
 | PROP-05 | Phase 2 | Pending |
-| PROP-06 | Phase 2 | Pending |
-| PROP-07 | Phase 2 | Pending |
+| PROP-06 | Phase 2 | Complete (02-01) |
+| PROP-07 | Phase 2 | Complete (02-01) |
 | VOTE-01 | Phase 2 | Pending |
 | VOTE-02 | Phase 2 | Pending |
 | VOTE-03 | Phase 2 | Pending |

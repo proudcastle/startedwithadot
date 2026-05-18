@@ -65,7 +65,7 @@ Plans:
 Plans:
 **Wave 1**
 
-- [ ] 02-01-PLAN.md — Proposal submission + feed display: inline input with character counter, card-based feed sorted by votes, Sonner toasts, rate limiting
+- [x] 02-01-PLAN.md — Proposal submission + feed display: inline input with character counter, card-based feed sorted by votes, Sonner toasts, rate limiting
 
 **Wave 2** *(blocked on Wave 1 completion)*
 
@@ -127,6 +127,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation and Auth | 2/2 | Complete   | 2026-05-18 |
-| 2. The Community Loop | 0/3 | Not started | - |
+| 2. The Community Loop | 1/3 | In progress | - |
 | 3. Game Canvas and Versions | 0/2 | Not started | - |
 | 4. Visual Identity and Launch | 0/3 | Not started | - |
