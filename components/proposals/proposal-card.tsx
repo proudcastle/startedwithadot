@@ -1,6 +1,5 @@
 import { Card, CardContent } from "@/components/ui/8bit/card";
 import { StatusBadge } from "./status-badge";
-import { DotCounter } from "./dot-counter";
 import { timeAgo } from "@/lib/format";
 import type { Database } from "@/types/database";
 import type { ReactNode } from "react";
@@ -16,11 +15,11 @@ interface ProposalCardProps {
     created_at: string;
     profiles: { username: string } | null;
   };
-  voted: boolean;
   children?: ReactNode;
+  actions?: ReactNode;
 }
 
-export function ProposalCard({ proposal, voted, children }: ProposalCardProps) {
+export function ProposalCard({ proposal, children, actions }: ProposalCardProps) {
   return (
     <Card>
       <CardContent className="p-4">
@@ -37,7 +36,7 @@ export function ProposalCard({ proposal, voted, children }: ProposalCardProps) {
             <span>·</span>
             <span>{timeAgo(proposal.created_at)}</span>
           </div>
-          <DotCounter count={proposal.vote_count} voted={voted} />
+          {actions}
         </div>
       </CardContent>
     </Card>

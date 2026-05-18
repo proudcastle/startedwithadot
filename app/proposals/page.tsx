@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { createClient } from "@/lib/supabase/server";
 import { ProposalInput } from "@/components/proposals/proposal-input";
 import { ProposalCard } from "@/components/proposals/proposal-card";
+import { ProposalCardActions } from "@/components/proposals/proposal-card-actions";
 import { StatusTabs } from "@/components/proposals/status-tabs";
 
 const VALID_STATUSES = ["open", "accepted", "implemented"] as const;
@@ -38,6 +39,20 @@ async function ProposalFeed({
 
   const isAuthenticated = !!user;
   const isVerified = !!user?.email_confirmed_at;
+
+  // Fetch user's votes in a single query for O(1) lookup
+  const userVoteSet = new Set<string>();
+  if (user) {
+    const { data: votes } = await supabase
+      .from("votes")
+      .select("proposal_id")
+      .eq("user_id", user.id);
+    if (votes) {
+      for (const vote of votes) {
+        userVoteSet.add(vote.proposal_id);
+      }
+    }
+  }
 
   // Build proposal query with optional status filter
   const query = supabase
@@ -77,7 +92,15 @@ async function ProposalFeed({
                 ...proposal,
                 profiles: proposal.profiles as { username: string } | null,
               }}
-              voted={false}
+              actions={
+                <ProposalCardActions
+                  proposalId={proposal.id}
+                  userId={user?.id ?? null}
+                  isAdmin={isAdmin}
+                  initialVoted={userVoteSet.has(proposal.id)}
+                  initialCount={proposal.vote_count}
+                />
+              }
             />
           ))}
         </div>
