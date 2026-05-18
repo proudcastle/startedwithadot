@@ -2,8 +2,23 @@ import { Suspense } from "react";
 import { createClient } from "@/lib/supabase/server";
 import { ProposalInput } from "@/components/proposals/proposal-input";
 import { ProposalCard } from "@/components/proposals/proposal-card";
+import { StatusTabs } from "@/components/proposals/status-tabs";
 
-async function ProposalFeed() {
+const VALID_STATUSES = ["open", "accepted", "implemented"] as const;
+type ValidStatus = (typeof VALID_STATUSES)[number];
+
+function isValidStatus(value: string): value is ValidStatus {
+  return (VALID_STATUSES as readonly string[]).includes(value);
+}
+
+async function ProposalFeed({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
+  const params = await searchParams;
+  const status = typeof params.status === "string" ? params.status : undefined;
+
   const supabase = await createClient();
 
   // Fetch current user auth state
@@ -24,12 +39,21 @@ async function ProposalFeed() {
   const isAuthenticated = !!user;
   const isVerified = !!user?.email_confirmed_at;
 
-  // Fetch proposals with author username, sorted by vote count
-  const { data: proposals } = await supabase
+  // Build proposal query with optional status filter
+  const query = supabase
     .from("proposals")
     .select("*, profiles(username)")
     .order("vote_count", { ascending: false })
     .limit(50);
+
+  if (status && isValidStatus(status)) {
+    query.eq("status", status);
+  } else {
+    // Hide rejected proposals from the "all" view
+    query.neq("status", "rejected");
+  }
+
+  const { data: proposals } = await query;
 
   return (
     <>
@@ -38,6 +62,10 @@ async function ProposalFeed() {
           isAuthenticated={isAuthenticated}
           isVerified={isVerified}
         />
+      </div>
+
+      <div className="mb-6">
+        <StatusTabs />
       </div>
 
       {proposals && proposals.length > 0 ? (
@@ -67,7 +95,11 @@ async function ProposalFeed() {
   );
 }
 
-export default function ProposalsPage() {
+export default function ProposalsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
   return (
     <div className="max-w-3xl mx-auto px-5 py-12">
       <h1 className="font-[family-name:var(--font-press-start-2p)] text-xl text-foreground mb-6">
@@ -81,7 +113,7 @@ export default function ProposalsPage() {
           </div>
         }
       >
-        <ProposalFeed />
+        <ProposalFeed searchParams={searchParams} />
       </Suspense>
     </div>
   );
