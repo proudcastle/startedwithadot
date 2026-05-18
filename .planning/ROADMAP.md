@@ -69,7 +69,7 @@ Plans:
 
 **Wave 2** *(blocked on Wave 1 completion)*
 
-- [ ] 02-02-PLAN.md — Voting + status tabs: optimistic vote toggle with dot counters, status filter tabs via URL params
+- [x] 02-02-PLAN.md — Voting + status tabs: optimistic vote toggle with dot counters, status filter tabs via URL params
 
 **Wave 3** *(blocked on Wave 2 completion)*
 
@@ -127,6 +127,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation and Auth | 2/2 | Complete   | 2026-05-18 |
-| 2. The Community Loop | 1/3 | In progress | - |
+| 2. The Community Loop | 2/3 | In progress | - |
 | 3. Game Canvas and Versions | 0/2 | Not started | - |
 | 4. Visual Identity and Launch | 0/3 | Not started | - |

@@ -39,16 +39,16 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **PROP-02**: Character counter displays remaining characters with narrator-style feedback
 - [x] **PROP-03**: Proposals display in a vertical timeline, sorted by votes (most dots first)
 - [x] **PROP-04**: Each proposal shows: text, username, relative timestamp, dot-counter, status indicator
-- [ ] **PROP-05**: Proposals filterable by status tabs: All / Open / Accepted / Implemented
+- [x] **PROP-05**: Proposals filterable by status tabs: All / Open / Accepted / Implemented
 - [x] **PROP-06**: Rate limiting enforced at 3 proposals per user per day
 - [x] **PROP-07**: Unauthenticated users can view proposals but not submit or vote
 
 ### Voting
 
-- [ ] **VOTE-01**: Authenticated user can toggle upvote on any proposal (one vote per user per proposal)
-- [ ] **VOTE-02**: Votes visualized as dot counters (● symbols) with numeric count above threshold (>10)
-- [ ] **VOTE-03**: Own vote visually highlighted when set
-- [ ] **VOTE-04**: Optimistic UI update on vote toggle with server reconciliation
+- [x] **VOTE-01**: Authenticated user can toggle upvote on any proposal (one vote per user per proposal)
+- [x] **VOTE-02**: Votes visualized as dot counters (● symbols) with numeric count above threshold (>10)
+- [x] **VOTE-03**: Own vote visually highlighted when set
+- [x] **VOTE-04**: Optimistic UI update on vote toggle with server reconciliation
 
 ### Admin
 
@@ -169,13 +169,13 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PROP-02 | Phase 2 | Complete (02-01) |
 | PROP-03 | Phase 2 | Complete (02-01) |
 | PROP-04 | Phase 2 | Complete (02-01) |
-| PROP-05 | Phase 2 | Pending |
+| PROP-05 | Phase 2 | Complete (02-02) |
 | PROP-06 | Phase 2 | Complete (02-01) |
 | PROP-07 | Phase 2 | Complete (02-01) |
-| VOTE-01 | Phase 2 | Pending |
-| VOTE-02 | Phase 2 | Pending |
-| VOTE-03 | Phase 2 | Pending |
-| VOTE-04 | Phase 2 | Pending |
+| VOTE-01 | Phase 2 | Complete (02-02) |
+| VOTE-02 | Phase 2 | Complete (02-02) |
+| VOTE-03 | Phase 2 | Complete (02-02) |
+| VOTE-04 | Phase 2 | Complete (02-02) |
 | ADMN-01 | Phase 2 | Pending |
 | ADMN-02 | Phase 2 | Pending |
 | ADMN-03 | Phase 2 | Pending |
