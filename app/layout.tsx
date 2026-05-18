@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Press_Start_2P } from "next/font/google";
 import { ThemeProvider } from "next-themes";
+import { Toaster } from "sonner";
 import { Header } from "@/components/header";
 import { Suspense } from "react";
 import "./globals.css";
@@ -56,6 +57,7 @@ export default function RootLayout({
             <Header />
           </Suspense>
           {children}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
