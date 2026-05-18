@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
+import { Badge } from "@/components/ui/8bit/badge";
 import { Suspense } from "react";
 
 async function UserInfo() {
@@ -12,7 +13,7 @@ async function UserInfo() {
     redirect("/auth/login");
   }
 
-  // Fetch username from profiles table (proves full stack: signup -> trigger -> profile -> read)
+  // Fetch username from profiles table
   const { data: profile } = await supabase
     .from("profiles")
     .select("username")
@@ -20,11 +21,24 @@ async function UserInfo() {
     .single();
 
   const username = profile?.username ?? user.user_metadata?.username ?? "user";
+  const isVerified = !!user.email_confirmed_at;
 
   return (
-    <p className="text-muted-foreground">
-      Welcome, <span className="text-foreground">{username}</span>.
-    </p>
+    <div className="flex flex-col items-center gap-4">
+      <div className="flex items-center gap-3">
+        <p className="text-muted-foreground">
+          Welcome, <span className="text-foreground">{username}</span>.
+        </p>
+        {!isVerified && (
+          <Badge variant="destructive">Unverified</Badge>
+        )}
+      </div>
+      {!isVerified && (
+        <p className="text-sm text-muted-foreground">
+          Verify your email to unlock the fun stuff. Check your inbox.
+        </p>
+      )}
+    </div>
   );
 }
 
