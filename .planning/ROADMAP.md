@@ -39,7 +39,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 Plans:
 **Wave 1**
 
-- [ ] 01-01-PLAN.md — Walking Skeleton: scaffold, theme, fonts, DB schema + RLS, signup with username E2E
+- [x] 01-01-PLAN.md — Walking Skeleton: scaffold, theme, fonts, DB schema + RLS, signup with username E2E
 
 **Wave 2** *(blocked on Wave 1 completion)*
 
@@ -119,7 +119,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation and Auth | 0/2 | Planning complete | - |
+| 1. Foundation and Auth | 1/2 | In Progress|  |
 | 2. The Community Loop | 0/3 | Not started | - |
 | 3. Game Canvas and Versions | 0/2 | Not started | - |
 | 4. Visual Identity and Launch | 0/3 | Not started | - |

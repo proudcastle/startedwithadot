@@ -9,17 +9,17 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Foundation
 
-- [ ] **FOUND-01**: Project scaffolded from Supabase Next.js Starter with App Router and TypeScript
-- [ ] **FOUND-02**: 8bitcn/ui installed via shadcn registry with monochrome dark theme configured
-- [ ] **FOUND-03**: Pixel font (Press Start 2P) for headings and Geist for body text loaded via next/font
-- [ ] **FOUND-04**: Tailwind CSS v4 configured with monochrome color palette (black, white, grays only)
-- [ ] **FOUND-05**: Database schema created with profiles, proposals, votes, and versions tables
-- [ ] **FOUND-06**: Row Level Security policies enforced on all tables with correct read/write rules
+- [x] **FOUND-01**: Project scaffolded from Supabase Next.js Starter with App Router and TypeScript
+- [x] **FOUND-02**: 8bitcn/ui installed via shadcn registry with monochrome dark theme configured
+- [x] **FOUND-03**: Pixel font (Press Start 2P) for headings and Geist for body text loaded via next/font
+- [x] **FOUND-04**: Tailwind CSS v4 configured with monochrome color palette (black, white, grays only)
+- [x] **FOUND-05**: Database schema created with profiles, proposals, votes, and versions tables
+- [x] **FOUND-06**: Row Level Security policies enforced on all tables with correct read/write rules
 
 ### Authentication
 
-- [ ] **AUTH-01**: User can sign up with email and password
-- [ ] **AUTH-02**: User chooses a unique, immutable username at registration
+- [x] **AUTH-01**: User can sign up with email and password
+- [x] **AUTH-02**: User chooses a unique, immutable username at registration
 - [ ] **AUTH-03**: User can log in and session persists across browser refresh
 - [ ] **AUTH-04**: User can reset password via email link
 - [ ] **AUTH-05**: User can log out from any page
@@ -148,14 +148,14 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FOUND-01 | Phase 1 | Pending |
-| FOUND-02 | Phase 1 | Pending |
-| FOUND-03 | Phase 1 | Pending |
-| FOUND-04 | Phase 1 | Pending |
-| FOUND-05 | Phase 1 | Pending |
-| FOUND-06 | Phase 1 | Pending |
-| AUTH-01 | Phase 1 | Pending |
-| AUTH-02 | Phase 1 | Pending |
+| FOUND-01 | Phase 1 | Complete |
+| FOUND-02 | Phase 1 | Complete |
+| FOUND-03 | Phase 1 | Complete |
+| FOUND-04 | Phase 1 | Complete |
+| FOUND-05 | Phase 1 | Complete |
+| FOUND-06 | Phase 1 | Complete |
+| AUTH-01 | Phase 1 | Complete |
+| AUTH-02 | Phase 1 | Complete |
 | AUTH-03 | Phase 1 | Pending |
 | AUTH-04 | Phase 1 | Pending |
 | AUTH-05 | Phase 1 | Pending |
