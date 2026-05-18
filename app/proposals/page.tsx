@@ -97,6 +97,7 @@ async function ProposalFeed({
                   proposalId={proposal.id}
                   userId={user?.id ?? null}
                   isAdmin={isAdmin}
+                  proposalStatus={proposal.status}
                   initialVoted={userVoteSet.has(proposal.id)}
                   initialCount={proposal.vote_count}
                 />
