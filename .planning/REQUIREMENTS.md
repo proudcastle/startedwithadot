@@ -59,9 +59,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Changelog
 
-- [ ] **CHNG-01**: Version history page displays all versions chronologically (newest first)
-- [ ] **CHNG-02**: Each version shows: number, title, date, linked proposal author, description
-- [ ] **CHNG-03**: Version number displayed in UI corner linking to changelog (e.g. "v0.1 ● A Dot.")
+- [x] **CHNG-01**: Version history page displays all versions chronologically (newest first)
+- [x] **CHNG-02**: Each version shows: number, title, date, linked proposal author, description
+- [x] **CHNG-03**: Version number displayed in UI corner linking to changelog (e.g. "v0.1 ● A Dot.")
 
 ### Visual Identity
 
@@ -180,9 +180,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ADMN-02 | Phase 2 | Complete |
 | ADMN-03 | Phase 2 | Complete |
 | ADMN-04 | Phase 2 | Complete |
-| CHNG-01 | Phase 3 | Pending |
-| CHNG-02 | Phase 3 | Pending |
-| CHNG-03 | Phase 3 | Pending |
+| CHNG-01 | Phase 3 | Complete |
+| CHNG-02 | Phase 3 | Complete |
+| CHNG-03 | Phase 3 | Complete |
 | VISL-01 | Phase 4 | Pending |
 | VISL-02 | Phase 4 | Pending |
 | VISL-03 | Phase 4 | Pending |

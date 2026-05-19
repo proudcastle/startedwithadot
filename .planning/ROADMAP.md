@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation and Auth** - Database schema, RLS policies, and complete auth flow from the Supabase starter template (completed 2026-05-18)
 - [x] **Phase 2: The Community Loop** - Proposals, voting, and admin curation working end-to-end (completed 2026-05-18)
-- [ ] **Phase 3: Game Canvas and Versions** - Pulsing dot canvas and version history linked to implemented proposals
+- [x] **Phase 3: Game Canvas and Versions** - Pulsing dot canvas and version history linked to implemented proposals (completed 2026-05-19)
 - [ ] **Phase 4: Visual Identity and Launch** - Pixel-art polish, landing page, SEO, narrator voice, and Vercel deployment
 
 ## Phase Details
@@ -95,7 +95,7 @@ Plans:
 **Wave 1** *(parallel -- no file overlap)*
 
 - [x] 03-01-PLAN.md — GameCanvas: pulsing dot on full-width canvas with RAF lifecycle, HiDPI scaling, home page integration
-- [ ] 03-02-PLAN.md — Changelog + version badge: /changelog page with version history, header version indicator linking to changelog
+- [x] 03-02-PLAN.md — Changelog + version badge: /changelog page with version history, header version indicator linking to changelog
 
 ### Phase 4: Visual Identity and Launch
 
@@ -129,5 +129,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 |-------|----------------|--------|-----------|
 | 1. Foundation and Auth | 2/2 | Complete   | 2026-05-18 |
 | 2. The Community Loop | 3/3 | Complete   | 2026-05-18 |
-| 3. Game Canvas and Versions | 1/2 | In Progress | - |
+| 3. Game Canvas and Versions | 2/2 | Complete   | 2026-05-19 |
 | 4. Visual Identity and Launch | 0/3 | Not started | - |
