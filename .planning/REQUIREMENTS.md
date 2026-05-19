@@ -65,7 +65,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Visual Identity
 
-- [ ] **VISL-01**: Dot used as recurring visual DNA: vote indicators, status markers, favicon, loading states, section separators
+- [x] **VISL-01**: Dot used as recurring visual DNA: vote indicators, status markers, favicon, loading states, section separators
 - [x] **VISL-02**: All micro-copy written in sloppy-narrator voice (Ferris Bueller/Deadpool tone)
 - [x] **VISL-03**: Empty states have personality-driven copy ("Nothing here yet. Be the first to tell the dot what to do.")
 - [x] **VISL-04**: Auth page copy in narrator voice ("Welcome back. The dot missed you.")
@@ -75,11 +75,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Landing Page
 
-- [ ] **LAND-01**: Hero section with full-width game canvas and narrator primary/secondary text
-- [ ] **LAND-02**: "The Story" concept explanation section with sloppy-narrator tone inline on landing page
-- [ ] **LAND-03**: Three-step CTA (Register → Propose → Vote) with dot bullet points
-- [ ] **LAND-04**: Proposals section with "Alright, what should happen next?" heading
-- [ ] **LAND-05**: Changelog preview section ("The Evolution") with most recent versions
+- [x] **LAND-01**: Hero section with full-width game canvas and narrator primary/secondary text
+- [x] **LAND-02**: "The Story" concept explanation section with sloppy-narrator tone inline on landing page
+- [x] **LAND-03**: Three-step CTA (Register → Propose → Vote) with dot bullet points
+- [x] **LAND-04**: Proposals section with "Alright, what should happen next?" heading
+- [x] **LAND-05**: Changelog preview section ("The Evolution") with most recent versions
 
 ### SEO & Meta
 
@@ -183,18 +183,18 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CHNG-01 | Phase 3 | Complete |
 | CHNG-02 | Phase 3 | Complete |
 | CHNG-03 | Phase 3 | Complete |
-| VISL-01 | Phase 4 | Pending |
+| VISL-01 | Phase 4 | Complete |
 | VISL-02 | Phase 4 | Complete |
 | VISL-03 | Phase 4 | Complete |
 | VISL-04 | Phase 4 | Complete |
 | VISL-05 | Phase 4 | Complete |
 | VISL-06 | Phase 4 | Complete |
 | VISL-07 | Phase 4 | Complete |
-| LAND-01 | Phase 4 | Pending |
-| LAND-02 | Phase 4 | Pending |
-| LAND-03 | Phase 4 | Pending |
-| LAND-04 | Phase 4 | Pending |
-| LAND-05 | Phase 4 | Pending |
+| LAND-01 | Phase 4 | Complete |
+| LAND-02 | Phase 4 | Complete |
+| LAND-03 | Phase 4 | Complete |
+| LAND-04 | Phase 4 | Complete |
+| LAND-05 | Phase 4 | Complete |
 | SEO-01 | Phase 4 | Complete |
 | SEO-02 | Phase 4 | Pending |
 | SEO-03 | Phase 4 | Pending |
