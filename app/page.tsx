@@ -139,6 +139,106 @@ export default function Home() {
 
       <DotSeparator />
 
+      {/* Section 2b: The Vision */}
+      <section className="max-w-3xl mx-auto px-5 py-12">
+        <h2 className="font-[family-name:var(--font-press-start-2p)] text-sm mb-6">
+          The vision. Or whatever this is.
+        </h2>
+        <div className="text-muted-foreground leading-relaxed space-y-4">
+          <p>
+            Every game you&apos;ve ever played was designed in a room you
+            weren&apos;t in. By people who decided what&apos;s fun before you got
+            to touch anything. Then they charged you $70 for the privilege.
+          </p>
+          <p>
+            We wanted to try the opposite. What if nobody decides? What if the
+            entire game — every mechanic, every pixel, every dumb feature — comes
+            from the people who play it?
+          </p>
+          <p>
+            No creative director. No focus groups. No &quot;we hear your feedback
+            and will consider it for a future update.&quot; Just... you say it,
+            people vote on it, we build it.
+          </p>
+          <p>
+            Is this a good idea? Honestly, we have no idea. But we figured the
+            worst case scenario is a dot on a screen, and the best case is
+            something nobody&apos;s ever seen before. Both feel worth trying.
+          </p>
+        </div>
+      </section>
+
+      <DotSeparator />
+
+      {/* Section 2c: The Initiators */}
+      <section className="max-w-3xl mx-auto px-5 py-12">
+        <h2 className="font-[family-name:var(--font-press-start-2p)] text-sm mb-8">
+          The Initiators
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          {/* Markus */}
+          <div className="bg-card border border-border p-6 space-y-4">
+            <div className="w-32 h-32 bg-muted mx-auto" aria-label="Pixel portrait of Markus — placeholder" />
+            <h3 className="font-[family-name:var(--font-press-start-2p)] text-xs text-center leading-relaxed">
+              The Prodigal Game Designer
+            </h3>
+            <div className="text-muted-foreground text-sm leading-relaxed space-y-2">
+              <p>
+                Plot twist: Markus actually studied this stuff. Two degrees in
+                computer science from the Entertainment Computing Group at
+                University of Duisburg-Essen — game design, VR, interactive
+                worlds, the whole academic buffet. He was literally trained to
+                build games.
+              </p>
+              <p>
+                Then he spent 15 years in banking, education, and digital
+                strategy. Building products nobody asked for in rooms where
+                &quot;innovation&quot; meant a new PowerPoint template. He
+                managed teams, launched platforms, shipped AI products — and
+                somewhere along the way forgot he once knew how to make things
+                fun.
+              </p>
+              <p>
+                This is him remembering. A dot on a screen. Full circle, if you
+                will.
+              </p>
+            </div>
+          </div>
+
+          {/* Daniel */}
+          <div className="bg-card border border-border p-6 space-y-4">
+            <div className="w-32 h-32 bg-muted mx-auto" aria-label="Pixel portrait of Daniel — placeholder" />
+            <h3 className="font-[family-name:var(--font-press-start-2p)] text-xs text-center leading-relaxed">
+              The Marketing Guy Who Agreed to This
+            </h3>
+            <div className="text-muted-foreground text-sm leading-relaxed space-y-2">
+              <p>
+                Daniel&apos;s job is to make businesses money on the internet. He
+                optimizes funnels, runs ad campaigns, fixes what&apos;s broken,
+                and tells clients uncomfortable truths about their websites.
+                He&apos;s the guy you call when &quot;we tried everything&quot;
+                actually means &quot;we tried nothing strategically.&quot;
+              </p>
+              <p>
+                Now he&apos;s here. Helping to launch a dot. A single,
+                non-revenue-generating dot with no product-market fit and a
+                target audience of &quot;anyone who thinks this is funny.&quot;
+                His conversion rate on this project is technically zero. He has
+                never been more excited about anything.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <p className="text-muted-foreground text-sm text-center mt-8 leading-relaxed">
+          One of us has two degrees in game design and spent 15 years not making
+          games. The other optimizes conversion funnels for a living and just
+          agreed to promote a dot. Together, we&apos;re unstoppable. Probably.
+        </p>
+      </section>
+
+      <DotSeparator />
+
       {/* Section 3: Three-Step CTA */}
       <section className="max-w-3xl mx-auto px-5 py-12 text-center">
         <h2 className="font-[family-name:var(--font-press-start-2p)] text-sm mb-8">
