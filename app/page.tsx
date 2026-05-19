@@ -5,7 +5,7 @@ import { GameFrame } from "@/components/game/game-frame";
 import { DotSeparator } from "@/components/dot-separator";
 import { DotLoader } from "@/components/dot-loader";
 import { createClient } from "@/lib/supabase/server";
-import { ProposalCard } from "@/components/proposals/proposal-card";
+import { Card, CardContent } from "@/components/ui/8bit/card";
 import {
   VersionCard,
   type VersionWithProposal,
@@ -28,15 +28,23 @@ async function ProposalsPreview() {
       </h3>
 
       {proposals && proposals.length > 0 ? (
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-2">
           {proposals.map((proposal) => (
-            <ProposalCard
-              key={proposal.id}
-              proposal={{
-                ...proposal,
-                profiles: proposal.profiles as { username: string } | null,
-              }}
-            />
+            <Card key={proposal.id}>
+              <CardContent className="px-3 py-2">
+                <p className="text-xs leading-relaxed">
+                  {proposal.text}
+                </p>
+                <div className="flex items-center justify-between mt-1">
+                  <span className="text-[10px] text-muted-foreground">
+                    @{(proposal.profiles as { username: string } | null)?.username ?? "anon"}
+                  </span>
+                  <span className="text-[10px] text-muted-foreground">
+                    {"\u25CF"} {proposal.vote_count}
+                  </span>
+                </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
       ) : (
@@ -46,10 +54,10 @@ async function ProposalsPreview() {
         </p>
       )}
 
-      <div className="mt-4">
+      <div className="mt-3">
         <Link
           href="/proposals"
-          className="text-muted-foreground hover:text-foreground underline underline-offset-4 inline-block text-sm"
+          className="text-muted-foreground hover:text-foreground underline underline-offset-4 inline-block text-xs"
         >
           See all proposals
         </Link>
@@ -206,71 +214,75 @@ export default function Home() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
           {/* Markus */}
-          <div className="bg-card border border-border p-8 space-y-5">
-            <Image
-              src="/images/Markus-8Bit.png"
-              alt="Pixel portrait of Markus"
-              width={128}
-              height={128}
-              className="mx-auto"
-              style={{ imageRendering: "pixelated" }}
-            />
-            <h3 className="font-[family-name:var(--font-press-start-2p)] text-[9px] text-center leading-relaxed uppercase">
-              The Prodigal Game Designer
-            </h3>
-            <div className="text-muted-foreground text-sm leading-relaxed space-y-3">
-              <p>
-                Plot twist: Markus actually studied this stuff. Two degrees in
-                computer science from the Entertainment Computing Group at
-                University of Duisburg-Essen — game design, VR, interactive
-                worlds, the whole academic buffet. He was literally trained to
-                build games.
-              </p>
-              <p>
-                Then he spent 15 years in banking, education, and digital
-                strategy. Building products nobody asked for in rooms where
-                &quot;innovation&quot; meant a new PowerPoint template. He
-                managed teams, launched platforms, shipped AI products — and
-                somewhere along the way forgot he once knew how to make things
-                fun.
-              </p>
-              <p>
-                This is him remembering. A dot on a screen. Full circle, if you
-                will.
-              </p>
-            </div>
-          </div>
+          <Card>
+            <CardContent className="p-8 space-y-5">
+              <Image
+                src="/images/Markus-8Bit.png"
+                alt="Pixel portrait of Markus"
+                width={128}
+                height={128}
+                className="mx-auto"
+                style={{ imageRendering: "pixelated" }}
+              />
+              <h3 className="font-[family-name:var(--font-press-start-2p)] text-[9px] text-center leading-relaxed uppercase">
+                The Prodigal Game Designer
+              </h3>
+              <div className="text-muted-foreground text-sm leading-relaxed space-y-3">
+                <p>
+                  Plot twist: Markus actually studied this stuff. Two degrees in
+                  computer science from the Entertainment Computing Group at
+                  University of Duisburg-Essen — game design, VR, interactive
+                  worlds, the whole academic buffet. He was literally trained to
+                  build games.
+                </p>
+                <p>
+                  Then he spent 15 years in banking, education, and digital
+                  strategy. Building products nobody asked for in rooms where
+                  &quot;innovation&quot; meant a new PowerPoint template. He
+                  managed teams, launched platforms, shipped AI products — and
+                  somewhere along the way forgot he once knew how to make things
+                  fun.
+                </p>
+                <p>
+                  This is him remembering. A dot on a screen. Full circle, if you
+                  will.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
 
           {/* Daniel */}
-          <div className="bg-card border border-border p-8 space-y-5">
-            <Image
-              src="/images/Daniel-8Bit.png"
-              alt="Pixel portrait of Daniel"
-              width={128}
-              height={128}
-              className="mx-auto"
-              style={{ imageRendering: "pixelated" }}
-            />
-            <h3 className="font-[family-name:var(--font-press-start-2p)] text-[9px] text-center leading-relaxed uppercase">
-              The Marketing Guy Who Agreed to This But Still Doesn&apos;t Understand
-            </h3>
-            <div className="text-muted-foreground text-sm leading-relaxed space-y-3">
-              <p>
-                Daniel&apos;s job is to make businesses money on the internet. He
-                optimizes funnels, runs ad campaigns, fixes what&apos;s broken,
-                and tells clients uncomfortable truths about their websites.
-                He&apos;s the guy you call when &quot;we tried everything&quot;
-                actually means &quot;we tried nothing strategically.&quot;
-              </p>
-              <p>
-                Now he&apos;s here. Helping to launch a dot. A single,
-                non-revenue-generating dot with no product-market fit and a
-                target audience of &quot;anyone who thinks this is funny.&quot;
-                His conversion rate on this project is technically zero. He has
-                never been more excited about anything.
-              </p>
-            </div>
-          </div>
+          <Card>
+            <CardContent className="p-8 space-y-5">
+              <Image
+                src="/images/Daniel-8Bit.png"
+                alt="Pixel portrait of Daniel"
+                width={128}
+                height={128}
+                className="mx-auto"
+                style={{ imageRendering: "pixelated" }}
+              />
+              <h3 className="font-[family-name:var(--font-press-start-2p)] text-[9px] text-center leading-relaxed uppercase">
+                The Marketing Guy Who Agreed to This But Still Doesn&apos;t Understand
+              </h3>
+              <div className="text-muted-foreground text-sm leading-relaxed space-y-3">
+                <p>
+                  Daniel&apos;s job is to make businesses money on the internet. He
+                  optimizes funnels, runs ad campaigns, fixes what&apos;s broken,
+                  and tells clients uncomfortable truths about their websites.
+                  He&apos;s the guy you call when &quot;we tried everything&quot;
+                  actually means &quot;we tried nothing strategically.&quot;
+                </p>
+                <p>
+                  Now he&apos;s here. Helping to launch a dot. A single,
+                  non-revenue-generating dot with no product-market fit and a
+                  target audience of &quot;anyone who thinks this is funny.&quot;
+                  His conversion rate on this project is technically zero. He has
+                  never been more excited about anything.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         <p className="text-muted-foreground text-sm text-center mt-10 leading-relaxed">
