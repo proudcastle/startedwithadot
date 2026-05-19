@@ -105,6 +105,59 @@ Direkt unter dem Hero, bevor die Proposals kommen. Eine kompakte Erklärung des 
 
 ---
 
+### 1c. "The Vision" / Warum das hier existiert
+
+Direkt nach der Story, visuell leicht abgesetzt. Erklärt die größere Idee hinter dem Experiment — warum zwei Typen die keine Game-Designer sind ein Spiel bauen das nur ein Punkt ist.
+
+**Vorgeschlagener Text:**
+
+> **"The vision. Or whatever this is."**
+>
+> Every game you've ever played was designed in a room you weren't in. By people who decided what's fun before you got to touch anything. Then they charged you $70 for the privilege.
+>
+> We wanted to try the opposite. What if nobody decides? What if the entire game — every mechanic, every pixel, every dumb feature — comes from the people who play it?
+>
+> No creative director. No focus groups. No "we hear your feedback and will consider it for a future update." Just... you say it, people vote on it, we build it.
+>
+> Is this a good idea? Honestly, we have no idea. But we figured the worst case scenario is a dot on a screen, and the best case is something nobody's ever seen before. Both feel worth trying.
+
+---
+
+### 1d. "The Initiators" / Wer steckt dahinter
+
+Eine eigene Sektion unterhalb der Vision. Zwei monochrome Pixel-Art-Portraits nebeneinander (werden von Markus manuell erstellt und als Assets geliefert), jeweils mit überspitztem Titel und kurzem Bio-Text. Der gesamte Ton ist Ron Gilbert auf Speed — absurde Titel, selbstironisch, keine Spur von "professioneller About-Seite".
+
+**Layout:** Zwei Karten nebeneinander (Desktop) / gestapelt (Mobile). Jede Karte:
+- Monochrome Pixel-Art-Portrait (Bild, wird als Static Asset geliefert: `/public/images/markus.png`, `/public/images/daniel.png`)
+- Überspitzter Titel (groß, Press Start 2P)
+- Bio-Text (Geist, normal readable)
+
+**Markus Stolzenburg:**
+
+> **"The Prodigal Game Designer"**
+>
+> Plot twist: Markus actually studied this stuff. Two degrees in computer science from the Entertainment Computing Group at University of Duisburg-Essen — game design, VR, interactive worlds, the whole academic buffet. He was literally trained to build games.
+>
+> Then he spent 15 years in banking, education, and digital strategy. Building products nobody asked for in rooms where "innovation" meant a new PowerPoint template. He managed teams, launched platforms, shipped AI products — and somewhere along the way forgot he once knew how to make things fun.
+>
+> This is him remembering. A dot on a screen. Full circle, if you will.
+
+**Daniel Beuing:**
+
+> **"The Marketing Guy Who Agreed to This"**
+>
+> Daniel's job is to make businesses money on the internet. He optimizes funnels, runs ad campaigns, fixes what's broken, and tells clients uncomfortable truths about their websites. He's the guy you call when "we tried everything" actually means "we tried nothing strategically."
+>
+> Now he's here. Helping to launch a dot. A single, non-revenue-generating dot with no product-market fit and a target audience of "anyone who thinks this is funny." His conversion rate on this project is technically zero. He has never been more excited about anything.
+
+**Unter den beiden Karten, zentriert:**
+
+> "One of us has two degrees in game design and spent 15 years not making games. The other optimizes conversion funnels for a living and just agreed to promote a dot. Together, we're unstoppable. Probably."
+
+**Technischer Hinweis:** Die Pixel-Art-Portraits sind statische Bild-Assets die Markus liefert. Platzhalter-Bilder (einfarbiges Quadrat oder generisches Pixel-Icon) einbauen bis die finalen Bilder da sind. Bildformat: PNG, quadratisch, idealerweise 128x128 oder 256x256.
+
+---
+
 ### 2. Proposals & Voting (Hauptbereich)
 
 **Überschrift:** "Alright, what should happen next?"
@@ -423,7 +476,8 @@ startedwithadot/
 2. **8bitcn/ui** als UI-Layer installieren, monochrom-Theme konfigurieren
 3. **Supabase** erweitern: Profiles-Tabelle (Username), Proposals, Votes, Versions, RLS Policies
 4. **Game-Layer:** Eine `<GameCanvas />`-Komponente die einen weißen Punkt auf schwarzem Canvas rendert
-5. **Landing Page:** Hero mit Dot-Canvas, Proposal-Timeline, Changelog
+5. **Landing Page:** Hero mit Dot-Canvas, Story-Sektion, Vision, Initiators, Proposal-Timeline, Changelog
+6. **Content-Sektionen:** "The Story" (Konzept-Erklärung), "The Vision" (Warum), "The Initiators" (Markus + Daniel mit Pixel-Portraits und Ron-Gilbert-Bios)
 6. **Auth erweitern:** Username-Feld bei Registrierung (Rest kommt vom Starter)
 7. **Proposal-System:** Twitter-Style Timeline — 140 Zeichen, Dot-Counter für Votes, inline Submit
 8. **Changelog:** Versionsliste mit Referenz zum jeweiligen Proposal

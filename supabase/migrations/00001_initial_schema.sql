@@ -27,7 +27,7 @@ CREATE UNIQUE INDEX profiles_username_lower_idx ON profiles (LOWER(username));
 
 -- Proposals table
 CREATE TABLE proposals (
-  id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
   user_id UUID REFERENCES profiles(id) ON DELETE CASCADE NOT NULL,
   text VARCHAR(140) NOT NULL,
   status proposal_status DEFAULT 'open' NOT NULL,
@@ -41,7 +41,7 @@ CREATE INDEX proposals_created_at_idx ON proposals (created_at DESC);
 
 -- Votes table
 CREATE TABLE votes (
-  id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
   user_id UUID REFERENCES profiles(id) ON DELETE CASCADE NOT NULL,
   proposal_id UUID REFERENCES proposals(id) ON DELETE CASCADE NOT NULL,
   created_at TIMESTAMPTZ DEFAULT NOW() NOT NULL,
@@ -53,7 +53,7 @@ CREATE INDEX votes_proposal_id_idx ON votes (proposal_id);
 
 -- Versions table
 CREATE TABLE versions (
-  id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
   version_number TEXT NOT NULL,
   title TEXT NOT NULL,
   description TEXT,
