@@ -5,7 +5,6 @@ import { GameFrame } from "@/components/game/game-frame";
 import { DotSeparator } from "@/components/dot-separator";
 import { DotLoader } from "@/components/dot-loader";
 import { createClient } from "@/lib/supabase/server";
-import { ProposalCard } from "@/components/proposals/proposal-card";
 import {
   VersionCard,
   type VersionWithProposal,
@@ -23,33 +22,41 @@ async function ProposalsPreview() {
 
   return (
     <div>
-      <h2 className="font-[family-name:var(--font-press-start-2p)] text-[10px] mb-6 uppercase tracking-wider">
-        Alright, what should happen next?
-      </h2>
+      <h3 className="font-[family-name:var(--font-press-start-2p)] text-[8px] mb-4 uppercase tracking-wider text-muted-foreground">
+        What should happen next?
+      </h3>
 
       {proposals && proposals.length > 0 ? (
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-2">
           {proposals.map((proposal) => (
-            <ProposalCard
+            <div
               key={proposal.id}
-              proposal={{
-                ...proposal,
-                profiles: proposal.profiles as { username: string } | null,
-              }}
-            />
+              className="bg-card border border-border px-3 py-2 flex items-start justify-between gap-2"
+            >
+              <div className="min-w-0 flex-1">
+                <p className="text-xs leading-relaxed truncate">
+                  {proposal.text}
+                </p>
+                <p className="text-[10px] text-muted-foreground mt-0.5">
+                  {(proposal.profiles as { username: string } | null)?.username ?? "anon"}
+                </p>
+              </div>
+              <span className="text-[10px] text-muted-foreground shrink-0">
+                {"\u25CF"} {proposal.vote_count}
+              </span>
+            </div>
           ))}
         </div>
       ) : (
-        <p className="text-muted-foreground">
-          Nobody&apos;s proposed anything yet. Be the first to tell the dot
-          what to do.
+        <p className="text-xs text-muted-foreground">
+          Nobody&apos;s proposed anything yet. Be the first.
         </p>
       )}
 
-      <div className="mt-4">
+      <div className="mt-3">
         <Link
           href="/proposals"
-          className="text-muted-foreground hover:text-foreground underline underline-offset-4 inline-block text-sm"
+          className="text-muted-foreground hover:text-foreground underline underline-offset-4 inline-block text-xs"
         >
           See all proposals
         </Link>
@@ -119,13 +126,15 @@ export default function Home() {
             It does nothing. You decide what happens next.
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-6">
           <div>
             <GameFrame />
           </div>
-          <Suspense fallback={<DotLoader />}>
-            <ProposalsPreview />
-          </Suspense>
+          <div className="text-sm">
+            <Suspense fallback={<DotLoader />}>
+              <ProposalsPreview />
+            </Suspense>
+          </div>
         </div>
       </section>
 
