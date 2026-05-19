@@ -1,6 +1,7 @@
 import { Suspense } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { GameCanvas } from "@/components/game/game-canvas";
+import { GameFrame } from "@/components/game/game-frame";
 import { DotSeparator } from "@/components/dot-separator";
 import { DotLoader } from "@/components/dot-loader";
 import { createClient } from "@/lib/supabase/server";
@@ -21,8 +22,8 @@ async function ProposalsPreview() {
     .limit(5);
 
   return (
-    <section className="max-w-3xl mx-auto px-5 py-12">
-      <h2 className="font-[family-name:var(--font-press-start-2p)] text-sm mb-6">
+    <section className="max-w-3xl mx-auto px-5 py-16">
+      <h2 className="font-[family-name:var(--font-press-start-2p)] text-[10px] mb-8 uppercase tracking-wider">
         Alright, what should happen next?
       </h2>
 
@@ -67,8 +68,8 @@ async function ChangelogPreview() {
     .limit(3);
 
   return (
-    <section className="max-w-3xl mx-auto px-5 py-12">
-      <h2 className="font-[family-name:var(--font-press-start-2p)] text-sm mb-6">
+    <section className="max-w-3xl mx-auto px-5 py-16">
+      <h2 className="font-[family-name:var(--font-press-start-2p)] text-[10px] mb-8 uppercase tracking-wider">
         The Evolution
       </h2>
 
@@ -109,13 +110,15 @@ export default function Home() {
   return (
     <main className="flex flex-col">
       {/* Section 1: Hero */}
-      <section>
-        <GameCanvas />
+      <section className="py-8">
+        <div className="max-w-3xl mx-auto px-5">
+          <GameFrame />
+        </div>
         <div className="max-w-3xl mx-auto px-5 py-12 text-center">
-          <h1 className="font-[family-name:var(--font-press-start-2p)] text-xl leading-relaxed">
+          <h1 className="font-[family-name:var(--font-press-start-2p)] text-sm sm:text-base leading-[2]">
             It all started with a dot.
           </h1>
-          <p className="text-muted-foreground mt-4 text-lg">
+          <p className="text-muted-foreground mt-4">
             It does nothing. You decide what happens next.
           </p>
         </div>
@@ -124,24 +127,43 @@ export default function Home() {
       <DotSeparator />
 
       {/* Section 2: Story */}
-      <section className="max-w-3xl mx-auto px-5 py-12">
-        <h2 className="font-[family-name:var(--font-press-start-2p)] text-sm mb-6">
-          The Story
+      <section className="max-w-3xl mx-auto px-5 py-16">
+        <h2 className="font-[family-name:var(--font-press-start-2p)] text-[10px] mb-8 uppercase tracking-wider">
+          So here&apos;s the deal.
         </h2>
-        <p className="text-muted-foreground leading-relaxed">
-          There&apos;s a dot. It sits there. It pulses. That&apos;s it. But
-          here&apos;s the thing -- you get to decide what happens to it. Propose
-          an idea. Vote on someone else&apos;s. The best ones get built. Every
-          version of this game exists because someone like you said &quot;hey,
-          what if the dot did this?&quot;
-        </p>
+        <div className="text-muted-foreground leading-relaxed space-y-4">
+          <p>
+            This is a game. Right now it&apos;s just a dot on a screen. Pretty
+            underwhelming, I know.
+          </p>
+          <p>
+            But this dot? It&apos;s yours. Well, not yours <em>yours</em> — it
+            belongs to everyone who shows up here.
+          </p>
+          <p>
+            Here&apos;s how it works: You tell us what the dot should do. Move?
+            Sure. Change color? Why not. Grow legs and fight aliens? ...we&apos;ll
+            talk about it.
+          </p>
+          <p>
+            Everyone votes. The best ideas get built. The dot evolves. Repeat.
+          </p>
+          <p>
+            No roadmap. No game design document. No five-year plan. Just a dot, a
+            community, and whatever happens next.
+          </p>
+          <p>
+            Could be the most community-driven game ever made. Could also be a dot
+            forever. Honestly? Both outcomes are fine.
+          </p>
+        </div>
       </section>
 
       <DotSeparator />
 
       {/* Section 2b: The Vision */}
-      <section className="max-w-3xl mx-auto px-5 py-12">
-        <h2 className="font-[family-name:var(--font-press-start-2p)] text-sm mb-6">
+      <section className="max-w-3xl mx-auto px-5 py-16">
+        <h2 className="font-[family-name:var(--font-press-start-2p)] text-[10px] mb-8 uppercase tracking-wider">
           The vision. Or whatever this is.
         </h2>
         <div className="text-muted-foreground leading-relaxed space-y-4">
@@ -171,18 +193,25 @@ export default function Home() {
       <DotSeparator />
 
       {/* Section 2c: The Initiators */}
-      <section className="max-w-3xl mx-auto px-5 py-12">
-        <h2 className="font-[family-name:var(--font-press-start-2p)] text-sm mb-8">
+      <section className="max-w-3xl mx-auto px-5 py-16">
+        <h2 className="font-[family-name:var(--font-press-start-2p)] text-[10px] mb-10 uppercase tracking-wider">
           The Initiators
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
           {/* Markus */}
-          <div className="bg-card border border-border p-6 space-y-4">
-            <div className="w-32 h-32 bg-muted mx-auto" aria-label="Pixel portrait of Markus — placeholder" />
-            <h3 className="font-[family-name:var(--font-press-start-2p)] text-xs text-center leading-relaxed">
+          <div className="bg-card border border-border p-8 space-y-5">
+            <Image
+              src="/images/Markus-8Bit.png"
+              alt="Pixel portrait of Markus"
+              width={128}
+              height={128}
+              className="mx-auto"
+              style={{ imageRendering: "pixelated" }}
+            />
+            <h3 className="font-[family-name:var(--font-press-start-2p)] text-[9px] text-center leading-relaxed uppercase">
               The Prodigal Game Designer
             </h3>
-            <div className="text-muted-foreground text-sm leading-relaxed space-y-2">
+            <div className="text-muted-foreground text-sm leading-relaxed space-y-3">
               <p>
                 Plot twist: Markus actually studied this stuff. Two degrees in
                 computer science from the Entertainment Computing Group at
@@ -206,12 +235,19 @@ export default function Home() {
           </div>
 
           {/* Daniel */}
-          <div className="bg-card border border-border p-6 space-y-4">
-            <div className="w-32 h-32 bg-muted mx-auto" aria-label="Pixel portrait of Daniel — placeholder" />
-            <h3 className="font-[family-name:var(--font-press-start-2p)] text-xs text-center leading-relaxed">
+          <div className="bg-card border border-border p-8 space-y-5">
+            <Image
+              src="/images/Daniel-8Bit.png"
+              alt="Pixel portrait of Daniel"
+              width={128}
+              height={128}
+              className="mx-auto"
+              style={{ imageRendering: "pixelated" }}
+            />
+            <h3 className="font-[family-name:var(--font-press-start-2p)] text-[9px] text-center leading-relaxed uppercase">
               The Marketing Guy Who Agreed to This
             </h3>
-            <div className="text-muted-foreground text-sm leading-relaxed space-y-2">
+            <div className="text-muted-foreground text-sm leading-relaxed space-y-3">
               <p>
                 Daniel&apos;s job is to make businesses money on the internet. He
                 optimizes funnels, runs ad campaigns, fixes what&apos;s broken,
@@ -230,7 +266,7 @@ export default function Home() {
           </div>
         </div>
 
-        <p className="text-muted-foreground text-sm text-center mt-8 leading-relaxed">
+        <p className="text-muted-foreground text-sm text-center mt-10 leading-relaxed">
           One of us has two degrees in game design and spent 15 years not making
           games. The other optimizes conversion funnels for a living and just
           agreed to promote a dot. Together, we&apos;re unstoppable. Probably.
@@ -240,31 +276,31 @@ export default function Home() {
       <DotSeparator />
 
       {/* Section 3: Three-Step CTA */}
-      <section className="max-w-3xl mx-auto px-5 py-12 text-center">
-        <h2 className="font-[family-name:var(--font-press-start-2p)] text-sm mb-8">
+      <section className="max-w-3xl mx-auto px-5 py-16 text-center">
+        <h2 className="font-[family-name:var(--font-press-start-2p)] text-[10px] mb-10 uppercase tracking-wider">
           How it works
         </h2>
-        <div className="flex flex-col sm:flex-row justify-center gap-8 sm:gap-12">
+        <div className="flex flex-col sm:flex-row justify-center gap-8 sm:gap-16">
           <Link
             href="/auth/sign-up"
-            className="text-lg text-foreground hover:text-muted-foreground"
+            className="text-foreground hover:text-muted-foreground"
           >
             {"\u25CF"} 1. Sign up
           </Link>
           <Link
             href="/proposals"
-            className="text-lg text-foreground hover:text-muted-foreground"
+            className="text-foreground hover:text-muted-foreground"
           >
             {"\u25CF"} 2. Propose
           </Link>
           <Link
             href="/proposals"
-            className="text-lg text-foreground hover:text-muted-foreground"
+            className="text-foreground hover:text-muted-foreground"
           >
             {"\u25CF"} 3. Vote
           </Link>
         </div>
-        <p className="text-muted-foreground mt-8 text-sm">
+        <p className="text-muted-foreground mt-10 text-sm">
           That&apos;s it. No tutorials. No onboarding. Just opinions.
         </p>
       </section>
