@@ -250,7 +250,7 @@ export default function Home() {
               style={{ imageRendering: "pixelated" }}
             />
             <h3 className="font-[family-name:var(--font-press-start-2p)] text-[9px] text-center leading-relaxed uppercase">
-              The Marketing Guy Who Agreed to This
+              The Marketing Guy Who Agreed to This But Still Doesn&apos;t Understand
             </h3>
             <div className="text-muted-foreground text-sm leading-relaxed space-y-3">
               <p>

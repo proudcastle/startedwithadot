@@ -32,9 +32,9 @@
 
 /* Monochrome dark theme -- dark IS the only theme */
 :root {
-  --background: 0 0% 4%;
+  --background: 0 0% 7%;
   --foreground: 0 0% 100%;
-  --card: 0 0% 7%;
+  --card: 0 0% 11%;
   --card-foreground: 0 0% 100%;
   --popover: 0 0% 4%;
   --popover-foreground: 0 0% 100%;
@@ -56,9 +56,9 @@
 
 /* Force dark mode -- same values since dark IS the theme */
 .dark {
-  --background: 0 0% 4%;
+  --background: 0 0% 7%;
   --foreground: 0 0% 100%;
-  --card: 0 0% 7%;
+  --card: 0 0% 11%;
   --card-foreground: 0 0% 100%;
   --popover: 0 0% 4%;
   --popover-foreground: 0 0% 100%;
