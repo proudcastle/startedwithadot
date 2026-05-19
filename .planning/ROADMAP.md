@@ -94,7 +94,7 @@ Plans:
 Plans:
 **Wave 1** *(parallel -- no file overlap)*
 
-- [ ] 03-01-PLAN.md — GameCanvas: pulsing dot on full-width canvas with RAF lifecycle, HiDPI scaling, home page integration
+- [x] 03-01-PLAN.md — GameCanvas: pulsing dot on full-width canvas with RAF lifecycle, HiDPI scaling, home page integration
 - [ ] 03-02-PLAN.md — Changelog + version badge: /changelog page with version history, header version indicator linking to changelog
 
 ### Phase 4: Visual Identity and Launch
@@ -129,5 +129,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 |-------|----------------|--------|-----------|
 | 1. Foundation and Auth | 2/2 | Complete   | 2026-05-18 |
 | 2. The Community Loop | 3/3 | Complete   | 2026-05-18 |
-| 3. Game Canvas and Versions | 0/2 | Not started | - |
+| 3. Game Canvas and Versions | 1/2 | In Progress | - |
 | 4. Visual Identity and Launch | 0/3 | Not started | - |

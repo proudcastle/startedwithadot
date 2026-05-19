@@ -27,11 +27,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Game Canvas
 
-- [ ] **GAME-01**: Full-width canvas renders a single white circle (~20px radius) centered on black background
-- [ ] **GAME-02**: Dot has subtle pulse animation (scale ±2px, 3-second cycle) via requestAnimationFrame
-- [ ] **GAME-03**: Canvas scales responsively with viewport
-- [ ] **GAME-04**: GameCanvas is an isolated React client component with no external dependencies
-- [ ] **GAME-05**: Canvas uses useRef for mutable state, not useState, with proper useEffect cleanup
+- [x] **GAME-01**: Full-width canvas renders a single white circle (~20px radius) centered on black background
+- [x] **GAME-02**: Dot has subtle pulse animation (scale ±2px, 3-second cycle) via requestAnimationFrame
+- [x] **GAME-03**: Canvas scales responsively with viewport
+- [x] **GAME-04**: GameCanvas is an isolated React client component with no external dependencies
+- [x] **GAME-05**: Canvas uses useRef for mutable state, not useState, with proper useEffect cleanup
 
 ### Proposals
 
@@ -160,11 +160,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | AUTH-04 | Phase 1 | Complete |
 | AUTH-05 | Phase 1 | Complete |
 | AUTH-06 | Phase 1 | Complete |
-| GAME-01 | Phase 3 | Pending |
-| GAME-02 | Phase 3 | Pending |
-| GAME-03 | Phase 3 | Pending |
-| GAME-04 | Phase 3 | Pending |
-| GAME-05 | Phase 3 | Pending |
+| GAME-01 | Phase 3 | Complete |
+| GAME-02 | Phase 3 | Complete |
+| GAME-03 | Phase 3 | Complete |
+| GAME-04 | Phase 3 | Complete |
+| GAME-05 | Phase 3 | Complete |
 | PROP-01 | Phase 2 | Complete (02-01) |
 | PROP-02 | Phase 2 | Complete (02-01) |
 | PROP-03 | Phase 2 | Complete (02-01) |
