@@ -88,13 +88,14 @@ Plans:
   3. Version history page shows all versions chronologically with number, title, date, linked proposal author, and description
   4. Current version number is visible in the UI corner and links to the changelog
 
-**Plans**: TBD
+**Plans**: 2 plans
 **UI hint**: yes
 
 Plans:
+**Wave 1** *(parallel -- no file overlap)*
 
-- [ ] 03-01: TBD
-- [ ] 03-02: TBD
+- [ ] 03-01-PLAN.md — GameCanvas: pulsing dot on full-width canvas with RAF lifecycle, HiDPI scaling, home page integration
+- [ ] 03-02-PLAN.md — Changelog + version badge: /changelog page with version history, header version indicator linking to changelog
 
 ### Phase 4: Visual Identity and Launch
 
