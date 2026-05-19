@@ -55,15 +55,15 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`dark ${geist.variable} ${geistMono.variable} ${pressStart2P.variable}`}
+      className={`${geist.variable} ${geistMono.variable} ${pressStart2P.variable}`}
       suppressHydrationWarning
     >
       <body className="bg-background text-foreground font-sans antialiased min-h-svh flex flex-col">
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem={false}
-          forcedTheme="dark"
+          forcedTheme="light"
           disableTransitionOnChange
         >
           <Suspense>
