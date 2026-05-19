@@ -22,13 +22,13 @@ async function ProposalsPreview() {
     .limit(5);
 
   return (
-    <section className="max-w-3xl mx-auto px-5 py-16">
-      <h2 className="font-[family-name:var(--font-press-start-2p)] text-[10px] mb-8 uppercase tracking-wider">
+    <div>
+      <h2 className="font-[family-name:var(--font-press-start-2p)] text-[10px] mb-6 uppercase tracking-wider">
         Alright, what should happen next?
       </h2>
 
       {proposals && proposals.length > 0 ? (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-3">
           {proposals.map((proposal) => (
             <ProposalCard
               key={proposal.id}
@@ -46,15 +46,15 @@ async function ProposalsPreview() {
         </p>
       )}
 
-      <div className="text-center mt-6">
+      <div className="mt-4">
         <Link
           href="/proposals"
-          className="text-muted-foreground hover:text-foreground underline underline-offset-4 inline-block"
+          className="text-muted-foreground hover:text-foreground underline underline-offset-4 inline-block text-sm"
         >
           See all proposals
         </Link>
       </div>
-    </section>
+    </div>
   );
 }
 
@@ -68,7 +68,7 @@ async function ChangelogPreview() {
     .limit(3);
 
   return (
-    <section className="max-w-3xl mx-auto px-5 py-16">
+    <section className="max-w-5xl mx-auto px-5 py-16">
       <h2 className="font-[family-name:var(--font-press-start-2p)] text-[10px] mb-8 uppercase tracking-wider">
         The Evolution
       </h2>
@@ -109,25 +109,30 @@ async function ChangelogPreview() {
 export default function Home() {
   return (
     <main className="flex flex-col">
-      {/* Section 1: Hero */}
-      <section className="py-8">
-        <div className="max-w-3xl mx-auto px-5">
-          <GameFrame />
-        </div>
-        <div className="max-w-3xl mx-auto px-5 py-12 text-center">
+      {/* Section 1: Hero — Game + Proposals side by side on desktop */}
+      <section className="max-w-5xl mx-auto px-5 py-12">
+        <div className="text-center mb-10">
           <h1 className="font-[family-name:var(--font-press-start-2p)] text-sm sm:text-base leading-[2]">
             It all started with a dot.
           </h1>
-          <p className="text-muted-foreground mt-4">
+          <p className="text-muted-foreground mt-3">
             It does nothing. You decide what happens next.
           </p>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div>
+            <GameFrame />
+          </div>
+          <Suspense fallback={<DotLoader />}>
+            <ProposalsPreview />
+          </Suspense>
         </div>
       </section>
 
       <DotSeparator />
 
       {/* Section 2: Story */}
-      <section className="max-w-3xl mx-auto px-5 py-16">
+      <section className="max-w-5xl mx-auto px-5 py-16">
         <h2 className="font-[family-name:var(--font-press-start-2p)] text-[10px] mb-8 uppercase tracking-wider">
           So here&apos;s the deal.
         </h2>
@@ -162,7 +167,7 @@ export default function Home() {
       <DotSeparator />
 
       {/* Section 2b: The Vision */}
-      <section className="max-w-3xl mx-auto px-5 py-16">
+      <section className="max-w-5xl mx-auto px-5 py-16">
         <h2 className="font-[family-name:var(--font-press-start-2p)] text-[10px] mb-8 uppercase tracking-wider">
           The vision. Or whatever this is.
         </h2>
@@ -193,7 +198,7 @@ export default function Home() {
       <DotSeparator />
 
       {/* Section 2c: The Initiators */}
-      <section className="max-w-3xl mx-auto px-5 py-16">
+      <section className="max-w-5xl mx-auto px-5 py-16">
         <h2 className="font-[family-name:var(--font-press-start-2p)] text-[10px] mb-10 uppercase tracking-wider">
           The Initiators
         </h2>
@@ -276,7 +281,7 @@ export default function Home() {
       <DotSeparator />
 
       {/* Section 3: Three-Step CTA */}
-      <section className="max-w-3xl mx-auto px-5 py-16 text-center">
+      <section className="max-w-5xl mx-auto px-5 py-16 text-center">
         <h2 className="font-[family-name:var(--font-press-start-2p)] text-[10px] mb-10 uppercase tracking-wider">
           How it works
         </h2>
@@ -307,14 +312,7 @@ export default function Home() {
 
       <DotSeparator />
 
-      {/* Section 4: Proposals Preview */}
-      <Suspense fallback={<DotLoader />}>
-        <ProposalsPreview />
-      </Suspense>
-
-      <DotSeparator />
-
-      {/* Section 5: Changelog Preview */}
+      {/* Section 4: Changelog Preview */}
       <Suspense fallback={<DotLoader />}>
         <ChangelogPreview />
       </Suspense>
