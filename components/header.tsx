@@ -2,6 +2,7 @@ import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { Button } from "@/components/ui/8bit/button";
 import { LogoutButton } from "./logout-button";
+import { VersionBadge } from "./versions/version-badge";
 
 export async function Header() {
   const supabase = await createClient();
@@ -19,6 +20,13 @@ export async function Header() {
     username = profile?.username ?? null;
   }
 
+  const { data: latestVersion } = await supabase
+    .from("versions")
+    .select("version_number")
+    .order("created_at", { ascending: false })
+    .limit(1)
+    .maybeSingle();
+
   return (
     <header className="w-full bg-card border-b border-border h-16 flex items-center">
       <div className="w-full max-w-5xl mx-auto flex justify-between items-center px-5">
@@ -29,6 +37,9 @@ export async function Header() {
           startedwithadot
         </Link>
         <nav className="flex items-center gap-4">
+          <VersionBadge
+            versionNumber={latestVersion?.version_number ?? null}
+          />
           <Link
             href="/proposals"
             className="font-[family-name:var(--font-press-start-2p)] text-sm text-muted-foreground hover:text-foreground"
