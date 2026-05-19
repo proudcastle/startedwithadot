@@ -66,12 +66,12 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Visual Identity
 
 - [ ] **VISL-01**: Dot used as recurring visual DNA: vote indicators, status markers, favicon, loading states, section separators
-- [ ] **VISL-02**: All micro-copy written in sloppy-narrator voice (Ferris Bueller/Deadpool tone)
-- [ ] **VISL-03**: Empty states have personality-driven copy ("Nothing here yet. Be the first to tell the dot what to do.")
-- [ ] **VISL-04**: Auth page copy in narrator voice ("Welcome back. The dot missed you.")
-- [ ] **VISL-05**: 404 page with narrator voice ("This page doesn't exist. Much like this game's roadmap.")
-- [ ] **VISL-06**: Loading states use pulsing dot instead of spinner
-- [ ] **VISL-07**: Section separators use three dots (· · ·) instead of horizontal lines
+- [x] **VISL-02**: All micro-copy written in sloppy-narrator voice (Ferris Bueller/Deadpool tone)
+- [x] **VISL-03**: Empty states have personality-driven copy ("Nothing here yet. Be the first to tell the dot what to do.")
+- [x] **VISL-04**: Auth page copy in narrator voice ("Welcome back. The dot missed you.")
+- [x] **VISL-05**: 404 page with narrator voice ("This page doesn't exist. Much like this game's roadmap.")
+- [x] **VISL-06**: Loading states use pulsing dot instead of spinner
+- [x] **VISL-07**: Section separators use three dots (· · ·) instead of horizontal lines
 
 ### Landing Page
 
@@ -83,20 +83,20 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### SEO & Meta
 
-- [ ] **SEO-01**: OG tags with title, description ("It's a dot. It does nothing. You decide what happens next."), and OG image
+- [x] **SEO-01**: OG tags with title, description ("It's a dot. It does nothing. You decide what happens next."), and OG image
 - [ ] **SEO-02**: Favicon as white dot on black background (16x16 / 32x32)
 - [ ] **SEO-03**: OG image: black background, white dot, project title text
 
 ### Footer
 
-- [ ] **FOOT-01**: Footer with narrator-style copyright and quip
-- [ ] **FOOT-02**: Links to changelog, privacy policy / impressum
+- [x] **FOOT-01**: Footer with narrator-style copyright and quip
+- [x] **FOOT-02**: Links to changelog, privacy policy / impressum
 
 ### Deployment
 
 - [ ] **DEPL-01**: Deployed to Vercel with environment variables for Supabase
 - [ ] **DEPL-02**: Domain startedwithadot.com configured
-- [ ] **DEPL-03**: Responsive mobile-first design across all pages
+- [x] **DEPL-03**: Responsive mobile-first design across all pages
 
 ## v2 Requirements
 
@@ -184,25 +184,25 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CHNG-02 | Phase 3 | Complete |
 | CHNG-03 | Phase 3 | Complete |
 | VISL-01 | Phase 4 | Pending |
-| VISL-02 | Phase 4 | Pending |
-| VISL-03 | Phase 4 | Pending |
-| VISL-04 | Phase 4 | Pending |
-| VISL-05 | Phase 4 | Pending |
-| VISL-06 | Phase 4 | Pending |
-| VISL-07 | Phase 4 | Pending |
+| VISL-02 | Phase 4 | Complete |
+| VISL-03 | Phase 4 | Complete |
+| VISL-04 | Phase 4 | Complete |
+| VISL-05 | Phase 4 | Complete |
+| VISL-06 | Phase 4 | Complete |
+| VISL-07 | Phase 4 | Complete |
 | LAND-01 | Phase 4 | Pending |
 | LAND-02 | Phase 4 | Pending |
 | LAND-03 | Phase 4 | Pending |
 | LAND-04 | Phase 4 | Pending |
 | LAND-05 | Phase 4 | Pending |
-| SEO-01 | Phase 4 | Pending |
+| SEO-01 | Phase 4 | Complete |
 | SEO-02 | Phase 4 | Pending |
 | SEO-03 | Phase 4 | Pending |
-| FOOT-01 | Phase 4 | Pending |
-| FOOT-02 | Phase 4 | Pending |
+| FOOT-01 | Phase 4 | Complete |
+| FOOT-02 | Phase 4 | Complete |
 | DEPL-01 | Phase 4 | Pending |
 | DEPL-02 | Phase 4 | Pending |
-| DEPL-03 | Phase 4 | Pending |
+| DEPL-03 | Phase 4 | Complete |
 
 **Coverage:**
 - v1 requirements: 55 total

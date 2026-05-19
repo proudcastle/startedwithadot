@@ -117,7 +117,7 @@ Plans:
 Plans:
 **Wave 1**
 
-- [ ] 04-01-PLAN.md — Visual DNA components (DotSeparator, DotLoader), footer, 404 page, narrator voice retrofit, DotLoader in Suspense fallbacks
+- [x] 04-01-PLAN.md — Visual DNA components (DotSeparator, DotLoader), footer, 404 page, narrator voice retrofit, DotLoader in Suspense fallbacks
 
 **Wave 2** *(blocked on Wave 1 completion, parallel within wave)*
 
@@ -138,4 +138,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | 1. Foundation and Auth | 2/2 | Complete   | 2026-05-18 |
 | 2. The Community Loop | 3/3 | Complete   | 2026-05-18 |
 | 3. Game Canvas and Versions | 2/2 | Complete   | 2026-05-19 |
-| 4. Visual Identity and Launch | 0/4 | Not started | - |
+| 4. Visual Identity and Launch | 1/4 | In Progress|  |
