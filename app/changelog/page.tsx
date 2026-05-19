@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { createClient } from "@/lib/supabase/server";
+import { DotLoader } from "@/components/dot-loader";
 import {
   VersionCard,
   type VersionWithProposal,
@@ -67,13 +68,7 @@ export default function ChangelogPage() {
         Every version, decided by you.
       </p>
 
-      <Suspense
-        fallback={
-          <div className="text-center py-12 text-muted-foreground">
-            Loading versions...
-          </div>
-        }
-      >
+      <Suspense fallback={<DotLoader />}>
         <VersionList />
       </Suspense>
     </div>

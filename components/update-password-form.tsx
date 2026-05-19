@@ -50,10 +50,10 @@ export function UpdatePasswordForm({
       <Card className="w-full max-w-[480px] mx-auto">
         <CardHeader className="space-y-2">
           <CardTitle className="font-[family-name:var(--font-press-start-2p)] text-xl leading-relaxed">
-            New password time.
+            New password
           </CardTitle>
           <CardDescription className="text-sm text-muted-foreground">
-            Make it something the dot would be proud of.
+            Make it a good one. The dot is watching.
           </CardDescription>
         </CardHeader>
         <CardContent>

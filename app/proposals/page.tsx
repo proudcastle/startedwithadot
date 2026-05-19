@@ -4,6 +4,7 @@ import { ProposalInput } from "@/components/proposals/proposal-input";
 import { ProposalCard } from "@/components/proposals/proposal-card";
 import { ProposalCardActions } from "@/components/proposals/proposal-card-actions";
 import { StatusTabs } from "@/components/proposals/status-tabs";
+import { DotLoader } from "@/components/dot-loader";
 
 const VALID_STATUSES = ["open", "accepted", "implemented"] as const;
 type ValidStatus = (typeof VALID_STATUSES)[number];
@@ -130,13 +131,7 @@ export default function ProposalsPage({
         Proposals
       </h1>
 
-      <Suspense
-        fallback={
-          <div className="text-center py-12 text-muted-foreground">
-            Loading proposals...
-          </div>
-        }
-      >
+      <Suspense fallback={<DotLoader />}>
         <ProposalFeed searchParams={searchParams} />
       </Suspense>
     </div>

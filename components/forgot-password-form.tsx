@@ -70,7 +70,7 @@ export function ForgotPasswordForm({
               Forgot your password?
             </CardTitle>
             <CardDescription className="text-sm text-muted-foreground">
-              Happens to the best of us. Even dots forget things.
+              It happens. Even to dots.
             </CardDescription>
           </CardHeader>
           <CardContent>

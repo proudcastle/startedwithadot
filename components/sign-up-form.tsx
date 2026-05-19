@@ -110,7 +110,7 @@ export function SignUpForm({
             Join the experiment.
           </CardTitle>
           <CardDescription className="text-sm text-muted-foreground">
-            All we need is an email and a bad idea.
+            Pick a username. It&apos;s permanent. Choose wisely.
           </CardDescription>
         </CardHeader>
         <CardContent>

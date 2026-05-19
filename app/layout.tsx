@@ -4,6 +4,7 @@ import { Press_Start_2P } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "sonner";
 import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 import { Suspense } from "react";
 import "./globals.css";
 
@@ -15,7 +16,19 @@ export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
   title: "It All Started With a Dot",
   description:
-    "A community platform where the dot evolves through proposals and voting.",
+    "It's a dot. It does nothing. You decide what happens next.",
+  openGraph: {
+    title: "It All Started With a Dot",
+    description:
+      "It's a dot. It does nothing. You decide what happens next.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "It All Started With a Dot",
+    description:
+      "It's a dot. It does nothing. You decide what happens next.",
+  },
 };
 
 const geist = Geist({
@@ -45,7 +58,7 @@ export default function RootLayout({
       className={`dark ${geist.variable} ${geistMono.variable} ${pressStart2P.variable}`}
       suppressHydrationWarning
     >
-      <body className="bg-background text-foreground font-sans antialiased">
+      <body className="bg-background text-foreground font-sans antialiased min-h-svh flex flex-col">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -56,7 +69,8 @@ export default function RootLayout({
           <Suspense>
             <Header />
           </Suspense>
-          {children}
+          <div className="flex-1">{children}</div>
+          <Footer />
           <Toaster />
         </ThemeProvider>
       </body>
