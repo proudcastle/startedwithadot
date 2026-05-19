@@ -55,6 +55,7 @@ export async function submitProposal(
     .insert({ user_id: user.id, text: result.data.text });
 
   if (error) {
+    console.error("Proposal insert failed:", error.message, error.code, error.details);
     return {
       message: "Something broke. The dot is investigating.",
       success: false,

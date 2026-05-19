@@ -38,7 +38,7 @@ export function LoginForm({
         password,
       });
       if (error) throw error;
-      router.push("/protected");
+      window.location.href = "/protected";
     } catch (error: unknown) {
       setError(
         error instanceof Error && error.message.includes("Invalid login")
