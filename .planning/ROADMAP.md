@@ -122,7 +122,7 @@ Plans:
 **Wave 2** *(blocked on Wave 1 completion, parallel within wave)*
 
 - [x] 04-02-PLAN.md — Full landing page with hero, story, CTA, proposals preview, changelog preview
-- [ ] 04-03-PLAN.md — SEO assets: OG image via ImageResponse, dynamic favicon, metadata update
+- [x] 04-03-PLAN.md — SEO assets: OG image via ImageResponse, dynamic favicon, metadata update
 
 **Wave 3** *(blocked on Wave 2 completion)*
 
@@ -138,4 +138,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | 1. Foundation and Auth | 2/2 | Complete   | 2026-05-18 |
 | 2. The Community Loop | 3/3 | Complete   | 2026-05-18 |
 | 3. Game Canvas and Versions | 2/2 | Complete   | 2026-05-19 |
-| 4. Visual Identity and Launch | 2/4 | In Progress|  |
+| 4. Visual Identity and Launch | 3/4 | In Progress|  |

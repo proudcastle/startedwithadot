@@ -84,8 +84,8 @@ Requirements for initial release. Each maps to roadmap phases.
 ### SEO & Meta
 
 - [x] **SEO-01**: OG tags with title, description ("It's a dot. It does nothing. You decide what happens next."), and OG image
-- [ ] **SEO-02**: Favicon as white dot on black background (16x16 / 32x32)
-- [ ] **SEO-03**: OG image: black background, white dot, project title text
+- [x] **SEO-02**: Favicon as white dot on black background (16x16 / 32x32)
+- [x] **SEO-03**: OG image: black background, white dot, project title text
 
 ### Footer
 
@@ -196,8 +196,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | LAND-04 | Phase 4 | Complete |
 | LAND-05 | Phase 4 | Complete |
 | SEO-01 | Phase 4 | Complete |
-| SEO-02 | Phase 4 | Pending |
-| SEO-03 | Phase 4 | Pending |
+| SEO-02 | Phase 4 | Complete |
+| SEO-03 | Phase 4 | Complete |
 | FOOT-01 | Phase 4 | Complete |
 | FOOT-02 | Phase 4 | Complete |
 | DEPL-01 | Phase 4 | Pending |
