@@ -111,14 +111,22 @@ Plans:
   4. OG tags, favicon (white dot on black), and meta descriptions are present and render correctly in link previews
   5. Site is deployed to Vercel at startedwithadot.com and is responsive across mobile and desktop
 
-**Plans**: TBD
+**Plans**: 4 plans
 **UI hint**: yes
 
 Plans:
+**Wave 1**
 
-- [ ] 04-01: TBD
-- [ ] 04-02: TBD
-- [ ] 04-03: TBD
+- [ ] 04-01-PLAN.md — Visual DNA components (DotSeparator, DotLoader), footer, 404 page, narrator voice retrofit, DotLoader in Suspense fallbacks
+
+**Wave 2** *(blocked on Wave 1 completion, parallel within wave)*
+
+- [ ] 04-02-PLAN.md — Full landing page with hero, story, CTA, proposals preview, changelog preview
+- [ ] 04-03-PLAN.md — SEO assets: OG image via ImageResponse, dynamic favicon, metadata update
+
+**Wave 3** *(blocked on Wave 2 completion)*
+
+- [ ] 04-04-PLAN.md — Vercel deployment, domain config, responsive verification, dot DNA audit
 
 ## Progress
 
@@ -130,4 +138,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | 1. Foundation and Auth | 2/2 | Complete   | 2026-05-18 |
 | 2. The Community Loop | 3/3 | Complete   | 2026-05-18 |
 | 3. Game Canvas and Versions | 2/2 | Complete   | 2026-05-19 |
-| 4. Visual Identity and Launch | 0/3 | Not started | - |
+| 4. Visual Identity and Launch | 0/4 | Not started | - |
