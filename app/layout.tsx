@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Press_Start_2P } from "next/font/google";
+import { Press_Start_2P, IBM_Plex_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "sonner";
 import { Header } from "@/components/header";
@@ -47,6 +47,12 @@ const pressStart2P = Press_Start_2P({
   variable: "--font-press-start-2p",
 });
 
+const ibmPlexMono = IBM_Plex_Mono({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+  variable: "--font-ibm-plex-mono",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -55,7 +61,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geist.variable} ${geistMono.variable} ${pressStart2P.variable}`}
+      className={`${geist.variable} ${geistMono.variable} ${pressStart2P.variable} ${ibmPlexMono.variable}`}
       suppressHydrationWarning
     >
       <body className="bg-background text-foreground font-sans antialiased min-h-svh flex flex-col">
