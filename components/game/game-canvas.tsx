@@ -2,8 +2,8 @@
 
 import { useRef, useEffect, useCallback } from "react";
 
-const BASE_RADIUS = 20;
-const PULSE_AMOUNT = 2;
+const BASE_RADIUS = 80;
+const PULSE_AMOUNT = 6;
 const CYCLE_MS = 3000;
 
 export function GameCanvas() {
