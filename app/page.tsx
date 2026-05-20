@@ -54,10 +54,16 @@ async function ProposalsPreview() {
         </p>
       )}
 
-      <div className="mt-3">
+      <div className="mt-4 flex flex-col gap-2">
         <Link
           href="/proposals"
-          className="text-muted-foreground hover:text-foreground underline underline-offset-4 inline-block text-xs"
+          className="inline-block text-center bg-accent text-accent-foreground font-[family-name:var(--font-press-start-2p)] text-[10px] px-5 py-3 border-2 border-foreground hover:brightness-110 transition-all"
+        >
+          Submit a proposal &rarr;
+        </Link>
+        <Link
+          href="/proposals"
+          className="text-muted-foreground hover:text-foreground underline underline-offset-4 inline-block text-xs text-center"
         >
           See all proposals
         </Link>
@@ -77,7 +83,7 @@ async function ChangelogPreview() {
 
   return (
     <section className="max-w-5xl mx-auto px-5 py-16">
-      <h2 className="font-[family-name:var(--font-press-start-2p)] text-[10px] mb-8 uppercase tracking-wider">
+      <h2 className="font-[family-name:var(--font-press-start-2p)] text-base sm:text-lg mb-8 uppercase tracking-wider">
         The Evolution
       </h2>
 
@@ -97,9 +103,18 @@ async function ChangelogPreview() {
           ))}
         </div>
       ) : (
-        <p className="text-muted-foreground">
-          Nothing&apos;s happened yet. The dot is still just a dot.
-        </p>
+        <div className="text-center py-8">
+          <p className="text-muted-foreground mb-4">
+            No history yet. You could be the first thing that ever happened to
+            this dot.
+          </p>
+          <Link
+            href="/proposals"
+            className="inline-block bg-accent text-accent-foreground font-[family-name:var(--font-press-start-2p)] text-[10px] px-5 py-3 border-2 border-foreground hover:brightness-110 transition-all"
+          >
+            Make history &rarr;
+          </Link>
+        </div>
       )}
 
       <div className="text-center mt-6">
@@ -117,13 +132,13 @@ async function ChangelogPreview() {
 export default function Home() {
   return (
     <main className="flex flex-col">
-      {/* Section 1: Hero — Game + Proposals side by side on desktop */}
+      {/* Section 1: Hero -- Game + Proposals side by side on desktop */}
       <section className="max-w-5xl mx-auto px-5 py-12">
         <div className="text-center mb-10">
-          <h1 className="font-[family-name:var(--font-press-start-2p)] text-sm sm:text-base leading-[2]">
+          <h1 className="font-[family-name:var(--font-press-start-2p)] text-2xl sm:text-4xl leading-[2]">
             It all started with a dot.
           </h1>
-          <p className="text-muted-foreground mt-3">
+          <p className="text-muted-foreground mt-3 text-lg">
             It does nothing. You decide what happens next.
           </p>
         </div>
@@ -139,67 +154,85 @@ export default function Home() {
         </div>
       </section>
 
-      <DotSeparator />
-
-      {/* Section 2: Story */}
-      <section className="max-w-5xl mx-auto px-5 py-16">
-        <h2 className="font-[family-name:var(--font-press-start-2p)] text-[10px] mb-8 uppercase tracking-wider">
-          So here&apos;s the deal.
+      {/* Section 2: How it works -- 3 cards, right after hero */}
+      <section className="max-w-5xl mx-auto px-5 py-16 text-center">
+        <h2 className="font-[family-name:var(--font-press-start-2p)] text-base sm:text-xl mb-10 uppercase tracking-wider">
+          How it works
         </h2>
-        <div className="text-muted-foreground leading-relaxed space-y-4">
-          <p>
-            This is a game. Right now it&apos;s just a dot on a screen. Pretty
-            underwhelming, I know.
-          </p>
-          <p>
-            But this dot? It&apos;s yours. Well, not yours <em>yours</em> — it
-            belongs to everyone who shows up here.
-          </p>
-          <p>
-            Here&apos;s how it works: You tell us what the dot should do. Move?
-            Sure. Change color? Why not. Grow legs and fight aliens? ...we&apos;ll
-            talk about it.
-          </p>
-          <p>
-            Everyone votes. The best ideas get built. The dot evolves. Repeat.
-          </p>
-          <p>
-            No roadmap. No game design document. No five-year plan. Just a dot, a
-            community, and whatever happens next.
-          </p>
-          <p>
-            Could be the most community-driven game ever made. Could also be a dot
-            forever. Honestly? Both outcomes are fine.
-          </p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <Card>
+            <CardContent className="p-6 text-center">
+              <span className="font-[family-name:var(--font-press-start-2p)] text-2xl block mb-3">1</span>
+              <Link
+                href="/auth/sign-up"
+                className="font-[family-name:var(--font-press-start-2p)] text-[10px] uppercase hover:text-accent transition-colors"
+              >
+                Sign up
+              </Link>
+              <p className="text-sm text-muted-foreground mt-2">
+                Takes 30 seconds. We only need an email.
+              </p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-6 text-center">
+              <span className="font-[family-name:var(--font-press-start-2p)] text-2xl block mb-3">2</span>
+              <Link
+                href="/proposals"
+                className="font-[family-name:var(--font-press-start-2p)] text-[10px] uppercase hover:text-accent transition-colors"
+              >
+                Propose
+              </Link>
+              <p className="text-sm text-muted-foreground mt-2">
+                Tell the dot what to do. 140 characters. Make it count.
+              </p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-6 text-center">
+              <span className="font-[family-name:var(--font-press-start-2p)] text-2xl block mb-3">3</span>
+              <Link
+                href="/proposals"
+                className="font-[family-name:var(--font-press-start-2p)] text-[10px] uppercase hover:text-accent transition-colors"
+              >
+                Vote
+              </Link>
+              <p className="text-sm text-muted-foreground mt-2">
+                The best ideas rise. The community decides.
+              </p>
+            </CardContent>
+          </Card>
         </div>
+        <p className="text-muted-foreground mt-10 text-sm">
+          That&apos;s it. No tutorials. No onboarding. Just opinions.
+        </p>
       </section>
 
       <DotSeparator />
 
-      {/* Section 2b: The Vision */}
+      {/* Section 3: The Manifesto -- merged Story + Vision */}
       <section className="max-w-5xl mx-auto px-5 py-16">
-        <h2 className="font-[family-name:var(--font-press-start-2p)] text-[10px] mb-8 uppercase tracking-wider">
-          The vision. Or whatever this is.
+        <h2 className="font-[family-name:var(--font-press-start-2p)] text-base sm:text-xl mb-8 uppercase tracking-wider">
+          Why this exists
         </h2>
-        <div className="text-muted-foreground leading-relaxed space-y-4">
+        <div className="text-muted-foreground leading-relaxed space-y-4 text-base">
           <p>
-            Every game you&apos;ve ever played was designed in a room you
-            weren&apos;t in. By people who decided what&apos;s fun before you got
-            to touch anything. Then they charged you $70 for the privilege.
+            This is a game. Right now it&apos;s just a dot on a screen. Pretty
+            underwhelming, I know. But every game you&apos;ve ever played was
+            designed in a room you weren&apos;t in. By people who decided
+            what&apos;s fun before you got to touch anything.
           </p>
           <p>
-            We wanted to try the opposite. What if nobody decides? What if the
-            entire game — every mechanic, every pixel, every dumb feature — comes
-            from the people who play it?
+            We wanted to try the opposite. You say it, people vote on it, we
+            build it. No roadmap. No game design document. No five-year plan.
+            Just a dot, a community, and whatever happens next.
           </p>
           <p>
-            No creative director. No focus groups. No &quot;we hear your feedback
-            and will consider it for a future update.&quot; Just... you say it,
-            people vote on it, we build it.
+            Could be the most community-driven game ever made. Could also be a
+            dot forever. Honestly? Both outcomes are fine.
           </p>
           <p>
-            Is this a good idea? Honestly, we have no idea. But we figured the
-            worst case scenario is a dot on a screen, and the best case is
+            The worst case scenario is a dot on a screen, and the best case is
             something nobody&apos;s ever seen before. Both feel worth trying.
           </p>
         </div>
@@ -207,9 +240,9 @@ export default function Home() {
 
       <DotSeparator />
 
-      {/* Section 2c: The Initiators */}
+      {/* Section 4: The Initiators -- shortened bios */}
       <section className="max-w-5xl mx-auto px-5 py-16">
-        <h2 className="font-[family-name:var(--font-press-start-2p)] text-[10px] mb-10 uppercase tracking-wider">
+        <h2 className="font-[family-name:var(--font-press-start-2p)] text-base sm:text-xl mb-10 uppercase tracking-wider">
           The Initiators
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
@@ -227,27 +260,15 @@ export default function Home() {
               <h3 className="font-[family-name:var(--font-press-start-2p)] text-[9px] text-center leading-relaxed uppercase">
                 The Prodigal Game Designer
               </h3>
-              <div className="text-muted-foreground text-sm leading-relaxed space-y-3">
-                <p>
-                  Plot twist: Markus actually studied this stuff. Two degrees in
-                  computer science from the Entertainment Computing Group at
-                  University of Duisburg-Essen — game design, VR, interactive
-                  worlds, the whole academic buffet. He was literally trained to
-                  build games.
-                </p>
-                <p>
-                  Then he spent 15 years in banking, education, and digital
-                  strategy. Building products nobody asked for in rooms where
-                  &quot;innovation&quot; meant a new PowerPoint template. He
-                  managed teams, launched platforms, shipped AI products — and
-                  somewhere along the way forgot he once knew how to make things
-                  fun.
-                </p>
-                <p>
-                  This is him remembering. A dot on a screen. Full circle, if you
-                  will.
-                </p>
-              </div>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Two degrees in game design. Spent 15 years in banking and
+                digital strategy instead of making games. Built products nobody
+                asked for in rooms where &quot;innovation&quot; meant a new
+                PowerPoint template. This is him remembering.
+              </p>
+              <p className="text-muted-foreground text-xs italic text-center">
+                &ldquo;A dot on a screen. Full circle, if you will.&rdquo;
+              </p>
             </CardContent>
           </Card>
 
@@ -263,70 +284,25 @@ export default function Home() {
                 style={{ imageRendering: "pixelated" }}
               />
               <h3 className="font-[family-name:var(--font-press-start-2p)] text-[9px] text-center leading-relaxed uppercase">
-                The Marketing Guy Who Agreed to This But Still Doesn&apos;t Understand
+                The Marketing Guy Who Agreed to This
               </h3>
-              <div className="text-muted-foreground text-sm leading-relaxed space-y-3">
-                <p>
-                  Daniel&apos;s job is to make businesses money on the internet. He
-                  optimizes funnels, runs ad campaigns, fixes what&apos;s broken,
-                  and tells clients uncomfortable truths about their websites.
-                  He&apos;s the guy you call when &quot;we tried everything&quot;
-                  actually means &quot;we tried nothing strategically.&quot;
-                </p>
-                <p>
-                  Now he&apos;s here. Helping to launch a dot. A single,
-                  non-revenue-generating dot with no product-market fit and a
-                  target audience of &quot;anyone who thinks this is funny.&quot;
-                  His conversion rate on this project is technically zero. He has
-                  never been more excited about anything.
-                </p>
-              </div>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Makes businesses money on the internet for a living. Now
+                he&apos;s helping launch a single, non-revenue-generating dot
+                with no product-market fit. His conversion rate on this project
+                is technically zero.
+              </p>
+              <p className="text-muted-foreground text-xs italic text-center">
+                &ldquo;He has never been more excited about anything.&rdquo;
+              </p>
             </CardContent>
           </Card>
         </div>
-
-        <p className="text-muted-foreground text-sm text-center mt-10 leading-relaxed">
-          One of us has two degrees in game design and spent 15 years not making
-          games. The other optimizes conversion funnels for a living and just
-          agreed to promote a dot. Together, we&apos;re unstoppable. Probably.
-        </p>
       </section>
 
       <DotSeparator />
 
-      {/* Section 3: Three-Step CTA */}
-      <section className="max-w-5xl mx-auto px-5 py-16 text-center">
-        <h2 className="font-[family-name:var(--font-press-start-2p)] text-[10px] mb-10 uppercase tracking-wider">
-          How it works
-        </h2>
-        <div className="flex flex-col sm:flex-row justify-center gap-8 sm:gap-16">
-          <Link
-            href="/auth/sign-up"
-            className="text-foreground hover:text-muted-foreground"
-          >
-            {"\u25CF"} 1. Sign up
-          </Link>
-          <Link
-            href="/proposals"
-            className="text-foreground hover:text-muted-foreground"
-          >
-            {"\u25CF"} 2. Propose
-          </Link>
-          <Link
-            href="/proposals"
-            className="text-foreground hover:text-muted-foreground"
-          >
-            {"\u25CF"} 3. Vote
-          </Link>
-        </div>
-        <p className="text-muted-foreground mt-10 text-sm">
-          That&apos;s it. No tutorials. No onboarding. Just opinions.
-        </p>
-      </section>
-
-      <DotSeparator />
-
-      {/* Section 4: Changelog Preview */}
+      {/* Section 5: Changelog Preview */}
       <Suspense fallback={<DotLoader />}>
         <ChangelogPreview />
       </Suspense>
