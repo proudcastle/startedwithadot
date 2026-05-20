@@ -25,16 +25,17 @@ async function VersionList() {
     return (
       <div className="text-center py-12">
         <h2 className="font-[family-name:var(--font-press-start-2p)] text-xs text-foreground mb-3">
-          No versions yet.
+          Nothing here. Yet.
         </h2>
-        <p className="text-muted-foreground mb-4">
-          The dot is waiting for its first evolution. Go propose something.
+        <p className="text-muted-foreground mb-6">
+          No history yet. You could be the first thing that ever happened to
+          this dot.
         </p>
         <Link
           href="/proposals"
-          className="text-foreground underline hover:text-muted-foreground"
+          className="inline-block bg-accent text-accent-foreground font-[family-name:var(--font-press-start-2p)] text-[10px] px-5 py-3 border-2 border-foreground hover:brightness-110 transition-all"
         >
-          Propose an idea
+          Make history &rarr;
         </Link>
       </div>
     );
@@ -61,7 +62,7 @@ async function VersionList() {
 export default function ChangelogPage() {
   return (
     <div className="max-w-3xl mx-auto px-5 py-8">
-      <h1 className="font-[family-name:var(--font-press-start-2p)] text-xl text-foreground mb-2">
+      <h1 className="font-[family-name:var(--font-press-start-2p)] text-2xl sm:text-3xl text-foreground mb-2">
         The Evolution
       </h1>
       <p className="text-sm text-muted-foreground mb-8">
